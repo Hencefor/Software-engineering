@@ -13,17 +13,23 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 	public static void temptest()/*用于最开始加入种子用户，后期可改善*/
 	{
 		User b=new User();
-		b.setId("123");
-		b.setEmail("123@qq");
+		User c=new User();
+		b.setId("ldc");
+		b.setEmail("ldc@qq");
 		b.setAcState(false);
 		b.setUsState(false);
 		b.counter=0;
+		c.setId("csc");
+		c.setEmail("csc@qq");
+		c.setAcState(true);
+		c.setUsState(true);
+		c.counter=0;
 		try {
 			FileOutputStream fs= new FileOutputStream("UserInfor.ser");
 			ObjectOutputStream os=new ObjectOutputStream(fs);
-			
+				
 				os.writeObject(b);
-			
+				
 			os.close();
 		} 
 		catch (FileNotFoundException e) {
@@ -36,7 +42,7 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 	}
 	
 	
-	public static void viewUser() /*查看所有用戶信息*/
+	public static void viewUser() /*view all user information*/
 	{
 		ArrayList<User> a= new ArrayList<User>();
 		try {
@@ -52,7 +58,7 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 					os.close();
 			for(User b: a)
 				{
-					System.out.println("id="+ b.getId()+"\nemail="+b.getEmail()+"\nstate="+b.getAcState()+"\nus="+b.getUsState()+"\nac="+b.getAcState()+"\n"+b.counter);
+					System.out.println("id="+ b.getId()+"\nemail="+b.getEmail()+"\nus="+b.getUsState()+"\nac="+b.getAcState()+"\n"+b.counter);
 				}
 			
 		} catch (FileNotFoundException e) {
@@ -71,7 +77,7 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 		
 	}
 	
-	public static void addUser(User a) /*注册一个用户*/
+	public static void addUser(User a) /*add a user to file*/
 	{
 		ArrayList<User> temp=fetchAllUsers();
 		temp.add(a);
@@ -197,7 +203,7 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 							break;
 						}
 						i++;
-						System.out.println(i);
+						//System.out.println(i);
 					}
 					writeFile(a);
 //					for(User b: a)
@@ -255,10 +261,14 @@ public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 	
 	public static void updateUser(User a)/*update a user's information in file*/
 	{
-		ArrayList<User> temp= fetchAllUsers();
+		
 		deleteUser(a);/*delete user a*/
+		ArrayList<User> temp= fetchAllUsers();
 		temp.add(a);/*add user a to arraylist*/
 		writeFile(temp);/*write the arraylist to file*/
+		
+		
+		
 	}
 	
 	/*public static void main(String[] args)

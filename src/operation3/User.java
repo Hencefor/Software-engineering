@@ -6,7 +6,7 @@ public class User implements Serializable{
 	private String name;
 	private String Id;
 	private String email;
-	private boolean acstate;
+	private boolean acState;
 	 int counter=0;
 	private boolean usState;
 //	private long a;
@@ -27,12 +27,12 @@ public class User implements Serializable{
 		this.email=email;
 	}
 	
-	public void setAcState(boolean acstate)
+	public void setAcState(boolean acState)
 	{
-		this.acstate=acstate;
+		this.acState=acState;
 	}
 	
-	public void setUsState(boolean ustate)
+	public void setUsState(boolean usState)
 	{
 		this.usState=usState;
 	}
@@ -61,7 +61,7 @@ public class User implements Serializable{
 	public boolean getAcState()
 	{
 		
-		return acstate;
+		return acState;
 	}
 	
 	public boolean getUsState()

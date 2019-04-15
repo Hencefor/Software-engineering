@@ -142,13 +142,19 @@ public class FileOpeDock  {
 			e.printStackTrace();
 		}
 	}
-	public static void updateDock(String dname,Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
+	public static void updateDock(Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
 	{
-		Dock d=fetchOneDock(dname);
-		deleteDock(d);
+//		Dock d=fetchOneDock(dname);
+//		deleteDock(d);
+//		ArrayList<Dock> temp= fetchAllDocks();
+//		temp.add(a);
+//		writeFileDock(temp);
+		
+		deleteDock(a);/*delete user a*/
 		ArrayList<Dock> temp= fetchAllDocks();
-		temp.add(a);
-		writeFileDock(temp);
+		temp.add(a);/*add user a to arraylist*/
+		writeFileDock(temp);/*write the arraylist to file*/
+		
 	}
 }
 

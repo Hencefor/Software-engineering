@@ -4,22 +4,41 @@ import java.util.ArrayList;
 public class Main {
 	public static void main(String[] args)
 	{
+//		FileOpe.temptest();
+//		
+//		User b=new User();
+//		User test=new User();
+//		b.setId("2016213515");
+//		b.setEmail("caoshencheng@");
+//		b.setAcState(false);
+//		b.setUsState(false);
+//		b.counter=0;
+//		b.setName("czh");
+//		FileOpe.addUser(b);
 		
-		//User b=new User();
-		//User test=new User();
-		//b.setId("2016213515");
-		//b.setEmail("caoshencheng@");
-		//b.setAcState(false);
-		//b.setUsState(false);
-		//b.counter=0;
-		//b.setName("csc");
-		//FileOpe.addUser(b);
-		//FileOpe.deleteUser(b);
-		//test=FileOpe.fetchOneUser("2016213515");
-		//System.out.println(test.getId());
-		//FileOpe.temptest();
-		//FileOpe.viewUser();
-		//Select a = new Select();
+//		test=FileOpe.fetchOneUser("2016213515");
+//		//FileOpe.deleteUser(test);
+//		test.setUsState(true);
+//		test.setAcState(true);
+//		FileOpe.updateUser(test);
+//		FileOpe.viewUser();
+//		
+		
+		
+//		ArrayList<User> create = new ArrayList<User>();
+//		create=FileOpe.fetchAllUsers();
+//		
+//		
+//		for(User temp:create)
+//		{
+//			System.out.println(temp.getUsState());
+//		}
+//		FileOpe.deleteUser(b);
+//		test=FileOpe.fetchOneUser("2016213515");
+//		System.out.println(test.getId());
+//		FileOpe.temptest();
+//		FileOpe.viewUser();
+//		Select a = new Select();
 		
 		Dock A= new Dock();
 		A.dockId="A";
@@ -34,12 +53,12 @@ public class Main {
 		create.add(C);
 		FileOpeDock.writeFileDock(create);
 		
-//		Dock test;
-//		test=FileOpeDock.fetchOneDock("A");
-//		test.latch[0]=true;
-//		//FileOpeDock.updateDock("A",test);
-//		create=FileOpeDock.fetchAllDocks();
-//		
+		Dock test;
+		test=FileOpeDock.fetchOneDock("A");
+		test.latch[0]=true;
+		FileOpeDock.updateDock(test);
+		create=FileOpeDock.fetchAllDocks();
+		
 		for(Dock temp:create)
 		{
 			System.out.println(temp.dockId+""+temp.isFull());

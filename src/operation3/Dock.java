@@ -1,12 +1,13 @@
 package operation3;
-public class Dock {
+import java.io.Serializable;
+public class Dock implements Serializable{
 	
 	//boolean[] latch= {true,true,true,true,true,false,false,false};
 	boolean[] latch= {false,true,true,true,true,true,true,true};
 	int i;
 	String dockId;
 	
-	public int releaseScooter()
+	public int releaseScooter()/*turn one latch to false if there is a latch has scooter(in order),return the position of latch */
 	{
 		int position=0;
 		
@@ -32,7 +33,7 @@ public class Dock {
 		return position;
 		
 	}
-	public int retrieveScooter()
+	public int retrieveScooter()/*turn one latch to true if there is a empty latch, return the postion of the latchf*/
 	{
 		int position=0;
 		try {
@@ -60,7 +61,7 @@ public class Dock {
 	{
 		
 	}
-	public boolean isEmpty()
+	public boolean isEmpty()/*if empty return false, else return true*/
 	{
 		int count=0;
 		for(i=0;i<8;i++)
@@ -81,7 +82,7 @@ public class Dock {
 		return false;
 	}
 	
-	public boolean isFull()
+	public boolean isFull()/*if full, return true, else return false*/
 	{
 		int count=0;
 		for(i=0;i<8;i++)

@@ -9,8 +9,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class FileOpeDock {
-	public static ArrayList<Dock> fetchAllDocks() {/*读取所有用户信息，但不打印，可用于遍历*/
+public class FileOpeDock  {
+	public static ArrayList<Dock> fetchAllDocks() {/*读取所有用户信息，但不打印，可用于遍历(check)*/
 
 		ArrayList<Dock> a= new ArrayList<Dock>();
 		try {
@@ -45,7 +45,7 @@ public class FileOpeDock {
 		return null;
 	}
 	
-	public static Dock fetchOneDock(String Id)/*use id to find a dock, return that dock*/
+	public static Dock fetchOneDock(String Id)/*use id to find a dock, return that dock(check)*/
 	{
 		int tracker=0;
 		Dock chosen = new Dock();
@@ -66,7 +66,7 @@ public class FileOpeDock {
 		
 	}
 	
-	public static void deleteDock(Dock del)/*use id to find a user, delete that user*/
+	public static void deleteDock(Dock del)/*use id to find a user, delete that user(check)*/
 	{
 		int i=0;
 		ArrayList<Dock> a= new ArrayList<Dock>();/*将文件中所有对象存入链表*/
@@ -93,7 +93,7 @@ public class FileOpeDock {
 							break;
 						}
 						i++;
-						System.out.println(i);
+						//System.out.println(i);
 					}
 					writeFileDock(a);
 //					for(User b: a)
@@ -118,30 +118,35 @@ public class FileOpeDock {
 		
 	}
 
-	public static void writeFileDock(ArrayList<Dock> a)/*receive an arraylist, write it into file*/
+	public static void writeFileDock(ArrayList<Dock> a)/*receive an arraylist, write it into file(check)*/
 	{
 		try {
 			FileOutputStream fs= new FileOutputStream("Docks.ser");
 			ObjectOutputStream os=new ObjectOutputStream(fs);
+			
 			for(Dock b:a)
 			{
 				os.writeObject(b);
 			}
+			
 			os.flush();
 			os.close();
 		} 
 		catch (FileNotFoundException e) {
+			System.out.println("error1");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
+			System.out.println("error2");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	public static void updateDock(Dock a)
+	public static void updateDock(String dname,Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
 	{
+		Dock d=fetchOneDock(dname);
+		deleteDock(d);
 		ArrayList<Dock> temp= fetchAllDocks();
-		deleteDock(a);
 		temp.add(a);
 		writeFileDock(temp);
 	}

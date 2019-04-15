@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class FileOpe{/*传一个user对象，把它存入文件UserInfor*/
+public class FileOpe {/*传一个user对象，把它存入文件UserInfor*/
 	
 	public static void temptest()/*用于最开始加入种子用户，后期可改善*/
 	{

@@ -26,7 +26,7 @@ public class GUI_beginning implements ActionListener {
  }
  
  public void go() {
-	
+	//
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setLayout(null);
 	

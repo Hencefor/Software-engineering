@@ -8,10 +8,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class FileOpe {/*´«Ò»¸öuser¶ÔÏó£¬°ÑËü´æÈëÎÄ¼şUserInfor*/
+public class FileOpe {/*ï¿½ï¿½Ò»ï¿½ï¿½userï¿½ï¿½ï¿½ó£¬°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½UserInfor*/
 	
-	public static void temptest()/*ÓÃÓÚ×î¿ªÊ¼¼ÓÈëÖÖ×ÓÓÃ»§£¬ºóÆÚ¿É¸ÄÉÆ*/
+	public static void temptest()/*ï¿½ï¿½ï¿½ï¿½ï¿½î¿ªÊ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿É¸ï¿½ï¿½ï¿½*/
 	{
+		User d = new User();
 		User b=new User();
 		User c=new User();
 		b.setId("ldc");
@@ -179,7 +180,7 @@ public class FileOpe {/*´«Ò»¸öuser¶ÔÏó£¬°ÑËü´æÈëÎÄ¼şUserInfor*/
 	public static void deleteUser(User del)/*use id to find a user, delete that user*/
 	{
 		int i=0;
-		ArrayList<User> a= new ArrayList<User>();/*½«ÎÄ¼şÖĞËùÓĞ¶ÔÏó´æÈëÁ´±í*/
+		ArrayList<User> a= new ArrayList<User>();/*ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 		try {
 			FileInputStream fileStream= new FileInputStream("UserInfor.ser");
 			ObjectInputStream os= new ObjectInputStream(fileStream);
@@ -188,7 +189,7 @@ public class FileOpe {/*´«Ò»¸öuser¶ÔÏó£¬°ÑËü´æÈëÎÄ¼şUserInfor*/
 				
 					while((head=(User)os.readObject())!=null) {
 						a.add(head);
-					}/*ATTENTION£¡£¡£¡£¡£¡ You can not write anything between this line and catchEOF*/
+					}/*ATTENTIONï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ You can not write anything between this line and catchEOF*/
 					
 					
 					

@@ -86,6 +86,11 @@ public void actionPerformed(ActionEvent e) {
 			System gui = new System();
 			gui.go();
 			}
+		else if (e.getSource() == button2) {
+			frame.dispose();
+			Dock gui = new Dock();
+			gui.go();
+			}
 
 		else if (e.getSource() == button3) {
 			frame.dispose();

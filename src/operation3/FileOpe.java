@@ -12,7 +12,7 @@ public class FileOpe {/**/
 	
 	public static void temptest()/**/
 	{
-		
+		User f = new User();
 		User d = new User();
 		User b=new User();
 		User c=new User();

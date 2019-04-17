@@ -8,10 +8,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class FileOpe {/*��һ��user���󣬰��������ļ�UserInfor*/
+public class FileOpe {/**/
 	
-	public static void temptest()/*�����ʼ���������û������ڿɸ���*/
+	public static void temptest()/**/
 	{
+		User f = new User();
 		User d = new User();
 		User b=new User();
 		User c=new User();
@@ -180,7 +181,7 @@ public class FileOpe {/*��һ��user���󣬰���������
 	public static void deleteUser(User del)/*use id to find a user, delete that user*/
 	{
 		int i=0;
-		ArrayList<User> a= new ArrayList<User>();/*���ļ������ж����������*/
+		ArrayList<User> a= new ArrayList<User>();/**/
 		try {
 			FileInputStream fileStream= new FileInputStream("UserInfor.ser");
 			ObjectInputStream os= new ObjectInputStream(fileStream);
@@ -189,7 +190,7 @@ public class FileOpe {/*��һ��user���󣬰���������
 				
 					while((head=(User)os.readObject())!=null) {
 						a.add(head);
-					}/*ATTENTION���������� You can not write anything between this line and catchEOF*/
+					}/**/
 					
 					
 					

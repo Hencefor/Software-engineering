@@ -9,7 +9,7 @@ public class User implements Serializable{
 	private boolean acState;
 	 int counter=0;
 	private boolean usState;
-//	private long a;
+	private long a;
 //	private long b;
 //	private long c;
 	

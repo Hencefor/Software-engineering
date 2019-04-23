@@ -3,7 +3,7 @@ import java.io.Serializable;
 public class Dock implements Serializable{
 	
 	//boolean[] latch= {true,true,true,true,true,false,false,false};
-	boolean[] latch= {false,true,true,true,true,true,true,true};
+	boolean[] latch= {true,true,true,true,true,false,false,false};
 	int i;
 	String dockId;
 	

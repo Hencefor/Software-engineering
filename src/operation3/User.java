@@ -6,10 +6,10 @@ public class User implements Serializable{
 	private String name;
 	private String Id;
 	private String email;
-	private boolean acState;
+	private boolean acState;/*account state*/
 	 int counter=0;
-	private boolean usState;
-	private long a;
+	private boolean usState;/*Using state*/
+	private long a=0;/*pick time*/
 //	private long b;
 //	private long c;
 	
@@ -75,11 +75,14 @@ public class User implements Serializable{
 		return counter;
 	}
 	
-//	public void pick(long a)/*取车时，记录系统时间并存到a中*/
-//	{
-//		Date time= new Date(a);
-//		this.a=a;
-//	}
+	public void pick()/*取车时，记录系统时间并存到a中*/
+	{
+		setAcState(true);
+		setUsState(true);
+		Date time= new Date();
+		long a = time.getTime();
+		this.a=a;
+	}
 //	
 //	public long Timeuse(long k)/*还车时，记录系统时间，计算时间间隔并返回时间间隔*/
 //	{

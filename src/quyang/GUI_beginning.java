@@ -23,6 +23,7 @@ public class GUI_beginning implements ActionListener {
  public static void main (String[] args) {
 	GUI_beginning gui = new GUI_beginning();
 	gui.go();
+	
  }
  
  public void go() {
@@ -36,6 +37,7 @@ public class GUI_beginning implements ActionListener {
 	label1.setOpaque(true);
 	label1.setFont(new java.awt.Font("serif", 1, 45));
 	label1.setForeground(Color.WHITE);
+	
 	
 	frame.getContentPane().add(label2);
 	label2.setBounds(0,150,430,200);
@@ -59,7 +61,7 @@ public class GUI_beginning implements ActionListener {
 	button2.setFont(bigFont);
 	button2.setForeground(Color.WHITE);
 	button2.addActionListener(this);
-
+	
 	frame.getContentPane().add(button3);
 	button3.setBounds(60,620,320,70);
 	button3.setBackground(Color.BLACK);

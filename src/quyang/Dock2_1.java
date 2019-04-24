@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import operation3.Dock;
+import operation3.FileOpe;
+import operation3.FileOpeDock;
 import operation3.User;
 
 public class Dock2_1  implements ActionListener {
@@ -116,14 +118,26 @@ public class Dock2_1  implements ActionListener {
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();
+				us.pick();
+				da.releaseScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 			if (a == "           DOCK    B") {
 				gui.go();
 				gui.label1.setText("           DOCK    B");
+				us.pick();
+				da.releaseScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 			if (a == "           DOCK    C") {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
+				us.pick();
+				da.releaseScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 		}
 	}

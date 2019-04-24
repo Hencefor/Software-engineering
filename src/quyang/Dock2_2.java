@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -105,6 +106,7 @@ public class Dock2_2  implements ActionListener {
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();
+				
 			}
 			if (a == "           DOCK    B") {
 				gui.go();
@@ -121,14 +123,41 @@ public class Dock2_2  implements ActionListener {
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();
+				us.setUsState(false);
+				Date time= new Date();
+				long c = time.getTime();
+				long r = us.Timeuse(c);
+				if(r<=1800)
+					us.setAcState(false);
+				da.retrieveScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 			if (a == "           DOCK    B") {
 				gui.go();
 				gui.label1.setText("           DOCK    B");
+				us.setUsState(false);
+				Date time= new Date();
+				long c = time.getTime();
+				long r = us.Timeuse(c);
+				if(r<=1800)
+					us.setAcState(false);
+				da.retrieveScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 			if (a == "           DOCK    C") {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
+				us.setUsState(false);
+				Date time= new Date();
+				long c = time.getTime();
+				long r = us.Timeuse(c);
+				if(r<=1800)
+					us.setAcState(false);
+				da.retrieveScooter();
+				FileOpe.updateUser(us);
+				FileOpeDock.updateDock(da);
 			}
 		}
 	}

@@ -84,12 +84,12 @@ public class User implements Serializable{
 		this.a=a;
 	}
 //	
-//	public long Timeuse(long k)/*还车时，记录系统时间，计算时间间隔并返回时间间隔*/
-//	{
-//		b=a-k;
-//		Date time= new Date(a-k);
-//		return b;
-//	}
+	public long Timeuse(long k)/*还车时，记录系统时间，计算时间间隔并返回时间间隔*/
+	{
+		long b=a-k;
+		
+		return b;
+	}
 	
 
 }

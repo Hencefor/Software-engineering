@@ -9,7 +9,7 @@ public class Dock implements Serializable{
 	
 	public int releaseScooter()/*turn one latch to false if there is a latch has scooter(in order),return the position of latch */
 	{
-		int position=0;
+		int position=1;
 		
 		try {
 			while(position<=8)
@@ -35,7 +35,7 @@ public class Dock implements Serializable{
 	}
 	public int retrieveScooter()/*turn one latch to true if there is a empty latch, return the postion of the latchf*/
 	{
-		int position=0;
+		int position=1;
 		try {
 			while(position<=8)
 			{
@@ -71,11 +71,11 @@ public class Dock implements Serializable{
 				count++;
 			}
 		}
-		if(count<=8 && count>0)
+		if(count==8)
 		{
 			return true;
 		}
-		else if(count==0)
+		else if(count<8&&count>=0)
 		{
 			return false;
 		}

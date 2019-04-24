@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import operation3.Dock;
 import operation3.FileOpe;
@@ -30,7 +31,7 @@ public class Dock2_1  implements ActionListener {
 	 JLabel label3 = new JLabel("Light",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	 JLabel label5 = new JLabel("Use Time: 1 : 30",JLabel.CENTER);
-	 
+	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -65,10 +66,14 @@ public class Dock2_1  implements ActionListener {
 		button2.setBackground(Color.BLACK);
 		button2.setFont(bigFont);
 		button2.setForeground(Color.WHITE);
-		button2.addActionListener(this);
+		button2.addActionListener(this); 
+			
+		int position=da.releaseScooter();
+		da.retrieveScooter();
 		
 		
 			frame.getContentPane().add(label3);
+			label3.setText(position+"");
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
@@ -84,7 +89,7 @@ public class Dock2_1  implements ActionListener {
 			
 			
 			
-			MyThread  mt = new MyThread(label4,label3,da,us);
+			
 			mt.act();
 			//button1.addActionListener(t);
 			
@@ -111,34 +116,33 @@ public class Dock2_1  implements ActionListener {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
 			}
+			mt.cancel();
 		}
 		else if (e.getSource() == button1) {
 			frame.dispose();
-			Dock3 gui = new Dock3();
+			Dock0 gui = new Dock0();
 			String a = label1.getText();
+			us.pick();
+			da.releaseScooter();
+			FileOpe.updateUser(us);
+
+			FileOpeDock.updateDock(da);
+			JOptionPane.showMessageDialog(null,"You have picked up the scooter successfully!");
 			if (a == "           DOCK    A") {
 				gui.go();
-				us.pick();
-				da.releaseScooter();
-				FileOpe.updateUser(us);
-				FileOpeDock.updateDock(da);
+				
 			}
 			if (a == "           DOCK    B") {
 				gui.go();
 				gui.label1.setText("           DOCK    B");
-				us.pick();
-				da.releaseScooter();
-				FileOpe.updateUser(us);
-				FileOpeDock.updateDock(da);
+				
 			}
 			if (a == "           DOCK    C") {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
-				us.pick();
-				da.releaseScooter();
-				FileOpe.updateUser(us);
-				FileOpeDock.updateDock(da);
+				
 			}
+			mt.cancel();
 		}
 	}
 

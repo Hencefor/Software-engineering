@@ -103,7 +103,7 @@ public void actionPerformed(ActionEvent e) {
 		da = FileOpeDock.fetchOneDock("B");
 		DockA gui = new DockA(da);
 		gui.go();
-		gui.label1.setText(da.isEmpty()+"    "+da.isFull());
+		gui.label1.setText("           DOCK    B");
 		}
 	else if (e.getSource() == button3) {
 		frame.dispose();

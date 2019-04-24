@@ -95,8 +95,11 @@ public class Dock1 implements ActionListener  {
 		// TODO Auto-generated method stub
 		boolean user_usS,user_acS;
 		boolean dock_em,dock_full;
-		user_usS = us.getUsState();
 		user_acS = us.getAcState();
+		
+		
+		user_usS = us.getUsState();
+		
 		dock_em = da.isEmpty();
 		dock_full = da.isFull();
 		if (e.getSource() == button1) {

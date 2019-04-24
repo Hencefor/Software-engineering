@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Dock implements ActionListener{
+public class Dock0 implements ActionListener{
  
  
  JFrame frame = new JFrame();
@@ -90,6 +90,7 @@ public void actionPerformed(ActionEvent e) {
 		}
 	else if (e.getSource() == button1) {
 		frame.dispose();
+		Dock0 a =new Dock0();
 		DockA gui = new DockA();
 		gui.go();
 		}

@@ -88,7 +88,7 @@ public void actionPerformed(ActionEvent e) {
 			}
 		else if (e.getSource() == button2) {
 			frame.dispose();
-			Dock gui = new Dock();
+			Dock0 gui = new Dock0();
 			gui.go();
 			}
 

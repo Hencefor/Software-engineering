@@ -120,7 +120,7 @@ public class Dock1 implements ActionListener  {
 		}
 		else if (e.getSource() == button3) {
 			frame.dispose();
-			Dock gui = new Dock();
+			Dock0 gui = new Dock0();
 			gui.go();
 		
 		}

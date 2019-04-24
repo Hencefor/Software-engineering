@@ -97,7 +97,7 @@ public class DockA implements ActionListener {
 		}
 		else if (e.getSource() == button1) {
 			String num = tf.getText();
-			us = FileOpe. fetchOneUser(num);
+			us = FileOpe.fetchOneUser(num);
 			if(us!=null) {
 				frame.dispose();
 				Dock1 gui = new Dock1(da,us);

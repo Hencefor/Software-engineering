@@ -84,7 +84,7 @@ public class Dock2_1  implements ActionListener {
 			
 			
 			
-			MyThread  mt = new MyThread(label4,label3);
+			MyThread  mt = new MyThread(label4,label3,da,us);
 			mt.act();
 			//button1.addActionListener(t);
 			

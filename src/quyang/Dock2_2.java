@@ -88,7 +88,7 @@ public class Dock2_2  implements ActionListener {
 			label5.setFont(new java.awt.Font("serif", 1, 25));
 			label5.setForeground(Color.WHITE);
 			
-			MyThread  mt = new MyThread(label4,label3);
+			MyThread  mt = new MyThread(label4,label3,da,us);
 			mt.act();
 			//button1.addActionListener(t);
 			

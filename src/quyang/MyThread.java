@@ -2,20 +2,27 @@ package quyang;
 
 import javax.swing.*;
 
+import operation3.Dock;
+import operation3.User;
+
 import java.awt.event.*;
 import java.awt.*;
 public class MyThread implements Runnable {
 
 	JLabel label, l2;
-	public MyThread(JLabel l,JLabel l1) {
+	Dock da;
+	User us;
+	public MyThread(JLabel l,JLabel l1,Dock x, User y) {
 		l2=l1;
 		label=l;
+		da = x;
+		us = y;
 	}
 	//public void actionPerformed(ActionEvent e) {
 		
 	//}
 	public void act() {
-		new Thread(new MyThread(label,l2)).start();
+		new Thread(new MyThread(label,l2,da,us)).start();
 	}
 	
 	public void run() {
@@ -46,7 +53,7 @@ public class MyThread implements Runnable {
 			i++;
 		}
 		if(time==0) {
-			Dock1 gui = new Dock1();
+			Dock1 gui = new Dock1(da,us);
 			gui.go();
 		}
 	}

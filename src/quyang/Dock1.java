@@ -9,8 +9,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import operation3.*;
+
 public class Dock1 implements ActionListener  {
-	
+	Dock da;
+	User us;
+	public Dock1(Dock x, User y) {
+		da = x;
+		us = y;
+	}
 	
 	JFrame frame = new JFrame();
 	JButton button1 = new JButton("Pick");
@@ -84,9 +91,16 @@ public class Dock1 implements ActionListener  {
 
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		boolean user_usS,user_acS;
+		boolean dock_em,dock_full;
+		user_usS = us.getUsState();
+		user_acS = us.getAcState();
+		dock_em = da.isEmpty();
+		dock_full = da.isFull();
 		if (e.getSource() == button1) {
+			if(user_usS==false && user_acS==false && )
 			frame.dispose();
-			Dock2_1 gui = new Dock2_1();
+			Dock2_1 gui = new Dock2_1(da,us);
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();
@@ -103,7 +117,7 @@ public class Dock1 implements ActionListener  {
 		}
 		else if (e.getSource() == button2) {
 			frame.dispose();
-			Dock2_2 gui = new Dock2_2();
+			Dock2_2 gui = new Dock2_2(da,us);
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();

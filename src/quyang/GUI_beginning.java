@@ -37,7 +37,6 @@ public class GUI_beginning implements ActionListener {
 	label1.setFont(new java.awt.Font("serif", 1, 45));
 	label1.setForeground(Color.WHITE);
 	
-	
 	frame.getContentPane().add(label2);
 	label2.setBounds(0,150,430,200);
 	label2.setBackground(Color.BLACK);
@@ -60,7 +59,7 @@ public class GUI_beginning implements ActionListener {
 	button2.setFont(bigFont);
 	button2.setForeground(Color.WHITE);
 	button2.addActionListener(this);
-	
+
 	frame.getContentPane().add(button3);
 	button3.setBounds(60,620,320,70);
 	button3.setBackground(Color.BLACK);
@@ -83,7 +82,7 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 		if (e.getSource() == button1) {
 			frame.dispose();
-			System gui = new System();
+			System0 gui = new System0();
 			gui.go();
 			}
 		else if (e.getSource() == button2) {

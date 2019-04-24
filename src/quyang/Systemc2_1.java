@@ -63,7 +63,7 @@ public class Systemc2_1  implements ActionListener {
 		// TODO Auto-generated method stub
 	if (e.getSource() == button1) {
 		frame.dispose();
-		System gui = new System ();
+		System0 gui = new System0 ();
 		gui.go();
 		}
 		

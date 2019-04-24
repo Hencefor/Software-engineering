@@ -80,7 +80,7 @@ public void actionPerformed(ActionEvent e) {
 	
 	if (e.getSource() == button3) {
 		frame.dispose();
-		System gui = new System();
+		System0 gui = new System0();
 		gui.go();
 		}
 	else if (e.getSource() == button2) {

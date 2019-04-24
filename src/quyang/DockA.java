@@ -10,6 +10,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JOptionPane;
+
+import operation3.*;
 
 public class DockA implements ActionListener {
 	String id="";
@@ -21,13 +24,20 @@ public class DockA implements ActionListener {
 	JTextField tf = new JTextField(9);
 	
 	JLabel label3 = new JLabel();
+	Dock da;
+	User us;
 	
+	
+	public DockA(Dock x) {
+		da = x;
+	}
  
 	public void go() {
 	
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
-	
+		
+		
 		frame.getContentPane().add(label1);
 		label1.setBounds(0,0,430,120);
 		label1.setBackground(Color.BLACK);
@@ -86,21 +96,28 @@ public class DockA implements ActionListener {
 		
 		}
 		else if (e.getSource() == button1) {
-			frame.dispose();
-			Dock1 gui = new Dock1();
-			String a = label1.getText();
-			if (a == "           DOCK    A") {
-				gui.go();
+			String num = tf.getText();
+			us = FileOpe. fetchOneUser(num);
+			if(us!=null) {
+				frame.dispose();
+				Dock1 gui = new Dock1(da,us);
+				String a = label1.getText();
+				if (a == "           DOCK    A") {
+					gui.go();
+				}
+				if (a == "           DOCK    B") {
+					gui.go();
+					gui.label1.setText("           DOCK    B");
+				}
+				if (a == "           DOCK    C") {
+					gui.go();
+					gui.label1.setText("           DOCK    C");
+				}
 			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
+			else {
+				JOptionPane.showMessageDialog(null, "You should try again",  JOptionPane.PLAIN_MESSAGE);
+				
 			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
-			}
-			
 			
 		
 		}

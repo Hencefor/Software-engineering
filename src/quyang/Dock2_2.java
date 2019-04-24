@@ -8,8 +8,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import operation3.*;
 
 public class Dock2_2  implements ActionListener {
+	Dock da;
+	User us;
+	public Dock2_2(Dock x, User y) {
+		da = x;
+		us = y;
+	}
 	
 	JFrame frame = new JFrame();
 
@@ -94,7 +101,7 @@ public class Dock2_2  implements ActionListener {
 		// TODO Auto-generated method stub
 		if (e.getSource() == button2) {
 			frame.dispose();
-			Dock1 gui = new Dock1();
+			Dock1 gui = new Dock1(da,us);
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();

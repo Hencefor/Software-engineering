@@ -20,13 +20,13 @@ public class FileOpe {/**/
 		User c=new User();
 		b.setId("ljw");
 		b.setName("ljw");
-		b.setEmail("ljw@qq");
+		b.setEmail("ljw@qq.com");
 		b.setAcState(false);
 		b.setUsState(false);
 		b.counter=0;
 		c.setId("csc");
 		c.setName("csc");
-		c.setEmail("csc@qq");
+		c.setEmail("csc@qq.com");
 		c.setAcState(false);
 		c.setUsState(false);
 		c.counter=0;

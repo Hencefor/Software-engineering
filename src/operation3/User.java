@@ -9,8 +9,8 @@ public class User implements Serializable{
 	private boolean acState;/*account state*/
 	 int counter=0;
 	private boolean usState;/*Using state*/
-	private long a=0;/*pick time*/
-//	private long b;
+	private long pickTime=0;/*pick time*/
+	private long dayDuration=0;/*time used in one day*/
 //	private long c;
 	
 	public void setId(String Id)
@@ -36,6 +36,28 @@ public class User implements Serializable{
 	{
 		this.usState=usState;
 	}
+	
+	public void fine()
+	{
+		this.acState=true;
+	}
+	
+	public void pay()
+	{
+		this.acState=false;
+	}
+	
+	public void usingSc()
+	{
+		this.usState=true;
+	}
+	
+	public void notUsingSc()
+	{
+		this.usState=false;
+	}
+	
+	
 	
 	public void Counter()
 	{
@@ -75,21 +97,32 @@ public class User implements Serializable{
 		return counter;
 	}
 	
-	public void pick()/*取车时，记录系统时间并存到a中*/
+	public void pick()/*when pick up a scooter, the current time will be recorded in pickTime*/
 	{
-		setAcState(true);
-		setUsState(true);
+		fine();
+		usingSc();
 		Date time= new Date();
 		long a = time.getTime();
-		this.a=a;
+		this.pickTime=a;
 	}
 //	
-	public long Timeuse(long k)/*还车时，记录系统时间，计算时间间隔并返回时间间隔*/
+	public long timeuse(long k)/*when return a scooter, this will return the duration of single using*/
 	{
-		long b=a-k;
+		long b=pickTime-k;
 		
 		return b;
 	}
-	
+	public void addDuration(long duration) /* record daily duration*/
+	{
+		this.dayDuration=this.dayDuration+duration;
+		judgeDuration();
+	}
+	public void judgeDuration()/*judge if the duration is invalid*/
+	{
+		if(this.dayDuration>7200000)
+		{
+			fine();
+		}
+	}
 
 }

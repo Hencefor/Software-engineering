@@ -126,7 +126,7 @@ public class Dock2_2  implements ActionListener {
 				us.setUsState(false);
 				Date time= new Date();
 				long c = time.getTime();
-				long r = us.Timeuse(c);
+				long r = us.timeuse(c);
 				if(r<=1800)
 					us.setAcState(false);
 				da.retrieveScooter();
@@ -139,7 +139,7 @@ public class Dock2_2  implements ActionListener {
 				us.setUsState(false);
 				Date time= new Date();
 				long c = time.getTime();
-				long r = us.Timeuse(c);
+				long r = us.timeuse(c);
 				if(r<=1800)
 					us.setAcState(false);
 				da.retrieveScooter();
@@ -152,7 +152,7 @@ public class Dock2_2  implements ActionListener {
 				us.setUsState(false);
 				Date time= new Date();
 				long c = time.getTime();
-				long r = us.Timeuse(c);
+				long r = us.timeuse(c);
 				if(r<=1800)
 					us.setAcState(false);
 				da.retrieveScooter();

@@ -71,13 +71,13 @@ public class Dock implements Serializable{
 				count++;
 			}
 		}
-		if(count<=8 && count>0)
-		{
-			return true;
-		}
-		else if(count==0)
+		if(count<8 && count>=0)
 		{
 			return false;
+		}
+		else if(count==8)
+		{
+			return true;
 		}
 		return false;
 	}

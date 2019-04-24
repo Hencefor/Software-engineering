@@ -115,7 +115,8 @@ public class DockA implements ActionListener {
 				}
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "You should try again",  JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null,"you should try again");
+				tf.setText("");
 				
 			}
 			

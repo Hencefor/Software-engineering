@@ -119,7 +119,7 @@ public class User implements Serializable{
 	}
 	public void judgeDuration()/*judge if the duration is invalid*/
 	{
-		if(this.dayDuration>7200000)
+		if(this.dayDuration > 7200000)
 		{
 			fine();
 		}

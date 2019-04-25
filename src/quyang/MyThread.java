@@ -1,13 +1,12 @@
 package quyang;
 
 import javax.swing.*;
-import operation3.Dock;
 import operation3.*;
 
 import java.awt.event.*;
 import java.awt.*;
 public class MyThread extends Thread implements Runnable {
-	int time = 3;
+	int time = 60;
 	public volatile boolean exit = false;
 	JLabel label, l2,lx;
 	JFrame frame;
@@ -22,9 +21,6 @@ public class MyThread extends Thread implements Runnable {
 		da = x;
 		use = y;
 	}
-	//public void actionPerformed(ActionEvent e) {
-		
-	//}
 	public void act() {
 		threads=new MyThread(lx,label,l2,frame,da,use);
 		threads.start();
@@ -46,7 +42,7 @@ public class MyThread extends Thread implements Runnable {
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				//e.printStackTrace();
 				break;
 			}
 			if(j==1) {
@@ -67,11 +63,11 @@ public class MyThread extends Thread implements Runnable {
 			if (a == "           DOCK    A") {
 				gui.go();
 			}
-			if (a == "           DOCK    B") {
+			else if (a == "           DOCK    B") {
 				gui.go();
 				gui.label1.setText("           DOCK    B");
 			}
-			if (a == "           DOCK    C") {
+			else if (a == "           DOCK    C") {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
 			}
@@ -83,7 +79,7 @@ public class MyThread extends Thread implements Runnable {
         	threads.interrupt(); 
 			threads.join();
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} 
 	}
 }

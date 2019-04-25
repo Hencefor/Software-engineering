@@ -31,9 +31,10 @@ public class Dock2_1  implements ActionListener {
 	 JLabel label3 = new JLabel("Light",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	 JLabel label5 = new JLabel("Use Time: 1 : 30",JLabel.CENTER);
-	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
+	 MyThread  mt;
 	 public void go() {
-		
+		MyThread  m = new MyThread(label1,label4,label3,frame,da,us);
+		mt=m;
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		
@@ -68,12 +69,12 @@ public class Dock2_1  implements ActionListener {
 		button2.setForeground(Color.WHITE);
 		button2.addActionListener(this); 
 			
-		int position=da.releaseScooter();
-		da.retrieveScooter();
+		//int position=da.releaseScooter();
+		//da.retrieveScooter();
 		
 		
 			frame.getContentPane().add(label3);
-			label3.setText(position+"");
+			//label3.setText(position+"");
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
@@ -87,8 +88,7 @@ public class Dock2_1  implements ActionListener {
 			label4.setFont(new java.awt.Font("serif", 1, 25));
 			label4.setForeground(Color.WHITE);
 			
-			
-			
+
 			
 			mt.act();
 			//button1.addActionListener(t);
@@ -128,20 +128,8 @@ public class Dock2_1  implements ActionListener {
 
 			FileOpeDock.updateDock(da);
 			JOptionPane.showMessageDialog(null,"You have picked up the scooter successfully!");
-			if (a == "           DOCK    A") {
-				gui.go();
-				
-			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
-				
-			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
-				
-			}
+			
+			gui.go();
 			mt.cancel();
 		}
 	}

@@ -69,12 +69,12 @@ public class Dock2_2  implements ActionListener {
 		button2.addActionListener(this);
 		
 		
-		int position = da.retrieveScooter();
-		da.releaseScooter();
+		//int position = da.retrieveScooter();
+		//da.releaseScooter();
 	
 		
 			frame.getContentPane().add(label3);
-			label3.setText(position+"");
+			//label3.setText(position+"");
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
@@ -142,21 +142,8 @@ public class Dock2_2  implements ActionListener {
 			FileOpeDock.updateDock(da);
 			
 			JOptionPane.showMessageDialog(null,"You have returned the scooter successfully!");
-			if (a == "           DOCK    A") {
-				gui.go();
-				us.setUsState(false);
-				
-			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
-				
-			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
-				
-			}
+			
+			gui.go();
 			mt.cancel();
 		}
 	}

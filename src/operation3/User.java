@@ -6,9 +6,9 @@ public class User implements Serializable{
 	private String name;
 	private String Id;
 	private String email;
-	private boolean acState;/*account state*/
+	private boolean acState=false;/*account state*/
 	 int counter=0;
-	private boolean usState;/*Using state*/
+	private boolean usState=false;/*Using state*/
 	private long pickTime=0;/*pick time*/
 	private long dayDuration=0;/*time used in one day*/
 //	private long c;

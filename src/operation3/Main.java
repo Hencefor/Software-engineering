@@ -8,9 +8,9 @@ public class Main {
 //		User a=FileOpe.fetchOneUser("161188232");
 //		a.setAcState(true);
 //		FileOpe.updateUser(a);
-		FileOpe.viewUser();
+		//FileOpe.viewUser();
 		//
-//		FileOpe.temptest();
+		FileOpe.temptest();
 		
 //		Date date = new Date();
 //		long a = date.getTime();

@@ -9,9 +9,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import operation3.AccountValidatorUtil;
+import operation3.FileOpe;
+import operation3.User;
+
 public class Systemc1 implements ActionListener  {
+	
+	public Systemc1()
+	{
+		
+	}
+	
+	
 	String id="";
 	JFrame frame = new JFrame();
 	JButton button1 = new JButton("Check");
@@ -21,9 +33,9 @@ public class Systemc1 implements ActionListener  {
 	JLabel label3 = new JLabel("Name:",JLabel.CENTER);
 	JLabel label4 = new JLabel("ID:",JLabel.CENTER);
 	JLabel label5 = new JLabel("Email:",JLabel.CENTER);
-	JTextField tf1 = new JTextField(9);
-	JTextField tf2 = new JTextField(9);
-	JTextField tf3 = new JTextField(9);
+	JTextField tf1 = new JTextField(9);/*name*/
+	JTextField tf2 = new JTextField(9);/*id*/
+	JTextField tf3 = new JTextField(9);/*email*/
 	JLabel label6 = new JLabel();
 	
  
@@ -125,6 +137,42 @@ public class Systemc1 implements ActionListener  {
 			System0 gui = new System0 ();
 			gui.go();
 			}
+		else if(e.getSource() == button1)
+		{
+			String id=	tf2.getText();
+            String mail = tf3.getText();
+            String name = tf1.getText();
+            if(AccountValidatorUtil.isIDCard(id)==false||AccountValidatorUtil.isEmail(mail)==false||AccountValidatorUtil.isUsername(name)==false)
+            {
+            	if(AccountValidatorUtil.isIDCard(id)==false)
+            		JOptionPane.showMessageDialog(null, "ID is not valid, please enter 9 digits number", "ERROR",JOptionPane.ERROR_MESSAGE);
+            	if(AccountValidatorUtil.isEmail(mail)==false)
+            		JOptionPane.showMessageDialog(null, "Emain is not valid, please follow the format xxx@xxx.xxx","ERROR",JOptionPane.ERROR_MESSAGE);
+            	if(AccountValidatorUtil.isUsername(name)==false)
+            		JOptionPane.showMessageDialog(null, "Name is not valid, please enter 3~20 English characters", "Successful",JOptionPane.ERROR_MESSAGE);
+            	
+            	
+            }
+            else{
+            	if((FileOpe.checkUniqueId(id))==false || FileOpe.checkUniqueEmail(mail)==false )
+                {
+             	  // System.out.println("exist");
+                	JOptionPane.showMessageDialog(null, "User exists¨r(¨s¨Œ¨t)¨q", "Error",JOptionPane.ERROR_MESSAGE); 
+                }
+             	   
+                else if((FileOpe.checkUniqueId(id))==true && FileOpe.checkUniqueEmail(mail)==true)
+                {
+             	   User aa=new User();
+             	   aa.setId(id);
+             	   aa.setEmail(mail);
+             	   aa.setName(name);
+             
+             	   FileOpe.addUser(aa);
+             	  JOptionPane.showMessageDialog(null, "Sign up succeeded(*^¨Œ^*)", "Successful",JOptionPane.PLAIN_MESSAGE);
+                }
+            }
+            
+		}
 		
 	}
 }

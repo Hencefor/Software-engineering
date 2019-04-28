@@ -5,6 +5,10 @@ import java.util.Date;
 public class Main {
 	public static void main(String[] args)
 	{
+//		User a=FileOpe.fetchOneUser("161188232");
+//		a.setAcState(true);
+//		FileOpe.updateUser(a);
+		FileOpe.viewUser();
 		//
 //		FileOpe.temptest();
 		

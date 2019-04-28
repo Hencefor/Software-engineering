@@ -102,7 +102,22 @@ public class Dock implements Serializable{
 		}
 		return false;
 	}
-
+	public int numOflatch()
+	{
+		return latch.length;
+	}
+	public int numOfSco()
+	{
+		int count=0;
+		for(int i=0;i<8;i++)
+		{
+			if(latch[i]==true)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
 	
 	public static void main(String[] args)
 	{

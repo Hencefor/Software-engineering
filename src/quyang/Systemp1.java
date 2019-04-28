@@ -9,9 +9,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import operation3.AccountValidatorUtil;
+import operation3.FileOpe;
+import operation3.User;
+
 public class Systemp1 implements ActionListener {
+	
 	String id="";
 	JFrame frame = new JFrame();
 	JButton button1 = new JButton("Check");
@@ -90,6 +96,7 @@ public class Systemp1 implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		// TODO Auto-generated method stub
 		if (e.getSource() == button2) {
 			frame.dispose();
@@ -97,9 +104,26 @@ public class Systemp1 implements ActionListener {
 			gui.go();
 			}
 		else if (e.getSource() == button1) {
-			frame.dispose();
-			Systemp2_1_100 gui = new Systemp2_1_100 ();
-			gui.go();
+			if(AccountValidatorUtil.isIDCard(tf1.getText())==false)
+			{
+				JOptionPane.showMessageDialog(null, "ID is not valid, please enter 9 digits number", "ERROR",JOptionPane.ERROR_MESSAGE);
+			}
+			else {
+				if(FileOpe.fetchOneUser(tf1.getText()) != null)
+				{
+					frame.dispose();
+					Systemp2_1_100 gui = new Systemp2_1_100 (FileOpe.fetchOneUser(tf1.getText()));
+					gui.go();
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "User doesn't exist", "ERROR",JOptionPane.ERROR_MESSAGE); 
+				}
+			}
+			
+			
+			
+			
 			}
 	}
 }

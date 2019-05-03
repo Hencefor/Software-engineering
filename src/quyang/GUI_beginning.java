@@ -27,7 +27,8 @@ public class GUI_beginning implements ActionListener {
  }
  
  public void go() {
-	//
+	frame.setSize(800, 800);//set hight and width	
+	 frame.setLocationRelativeTo(null);// set in middle
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setLayout(null);
 	

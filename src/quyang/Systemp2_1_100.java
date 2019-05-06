@@ -8,23 +8,46 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import operation3.FileOpe;
+import operation3.User;
 
 public class Systemp2_1_100 implements ActionListener {
- 
- 
+	User a;
+	public Systemp2_1_100()
+	{
+		
+	}
+	 public Systemp2_1_100(User a)
+	 {
+		 this.a=a;
+	 }
+	 
+	 
  JFrame frame = new JFrame();
  JButton button1 = new JButton("User");
  JButton button2 = new JButton("Pay");
  JButton button3 = new JButton("Exit");
  JLabel label1 = new JLabel(" PAY ",JLabel.CENTER);
  JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
- JLabel label3 = new JLabel("You should pay 100",JLabel.CENTER);
+ JLabel label3 = new JLabel("",JLabel.CENTER);
  JLabel label4 = new JLabel();
  
  
  
  public void go() {
-	
+	int amount = -1;
+	if(a.getAcState()==true) {
+		amount=100;
+	}
+	else if(a.getAcState()==false)
+	{
+		amount=0;
+	}
+		
+	 
+	 
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setLayout(null);
 	
@@ -44,6 +67,7 @@ public class Systemp2_1_100 implements ActionListener {
 	label2.setForeground(Color.WHITE);
 	
 	frame.getContentPane().add(label3);
+	label3.setText("You should pay"+amount+"");
 	label3.setBounds(0,390,430,100);
 	label3.setBackground(Color.BLACK);
 	label3.setOpaque(true);
@@ -80,13 +104,21 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	if (e.getSource() == button3) {
 		frame.dispose();
-		System gui = new System ();
+		System0 gui = new System0 ();
 		gui.go();
 		}
 	else if (e.getSource() == button2) {
-		frame.dispose();
-		Systemp2_1_0 gui = new Systemp2_1_0 ();
-		gui.go();
+		if(a.getAcState()==true) {
+			a.pay();
+			FileOpe.updateUser(a);
+			JOptionPane.showMessageDialog(null, "Fine paied", "Successful",JOptionPane.PLAIN_MESSAGE); 
+			label3.setText("You should pay 0");
+		}
+		else if(a.getAcState()==false)
+		{
+			JOptionPane.showMessageDialog(null, "Unless you are Mine owner, you don't need to pay anything", "ERROR",JOptionPane.ERROR_MESSAGE); 
+		}
+		
 		}
 }
 }

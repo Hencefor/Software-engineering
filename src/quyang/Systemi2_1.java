@@ -1,10 +1,11 @@
 package quyang;
-
+import operation3.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,16 +14,33 @@ import javax.swing.JTextField;
 
 public class Systemi2_1 implements ActionListener  {
 	String id="";
+	Dock A;
+	Dock B;
+	Dock C;
+	
 	JFrame frame = new JFrame();
 	JButton button2 = new JButton("Exit");
 	JLabel label1 = new JLabel("DOCK",JLabel.CENTER);
-	JLabel label2 = new JLabel("<html>A_scooter:---<br>A_empty :---<br>B_scooter:---<br>B_empty :---<br>C_scooter:---<br>C_empty :---</html> ",JLabel.CENTER);
+	JLabel label2 = new JLabel("<html>A_latch:---<br>A_scooters :---<br>B_latch:---<br>B_scooters :---<br>C_latchr:---<br>C_scooters :---</html> ",JLabel.CENTER);
 	
 	JLabel label6 = new JLabel();
 	
  
 	public void go() {
-	
+		A=FileOpeDock.fetchOneDock("A");
+		B=FileOpeDock.fetchOneDock("B");
+		C=FileOpeDock.fetchOneDock("C");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 	
@@ -34,6 +52,7 @@ public class Systemi2_1 implements ActionListener  {
 		label1.setForeground(Color.WHITE);
 	
 		frame.getContentPane().add(label2);
+		label2.setText("<html>A_latch:"+A.numOflatch()+"<br>A_scooters :"+A.numOfSco()+"<br>B_latch:"+B.numOflatch()+"<br>B_scooters :"+B.numOfSco()+"<br>C_latch:"+C.numOflatch()+"<br>C_scooters :"+C.numOfSco()+"</html> ");
 		label2.setBounds(0,150,430,450);
 		label2.setBackground(Color.BLACK);
 		label2.setOpaque(true);

@@ -8,8 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import operation3.*;
 
-public class Dock implements ActionListener{
+public class Dock0 implements ActionListener{
  
  
  JFrame frame = new JFrame();
@@ -28,7 +29,7 @@ public class Dock implements ActionListener{
 	
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setLayout(null);
-	
+
 	frame.getContentPane().add(label1);
 	label1.setBounds(0,0,430,120);
 	label1.setBackground(Color.BLACK);
@@ -90,18 +91,25 @@ public void actionPerformed(ActionEvent e) {
 		}
 	else if (e.getSource() == button1) {
 		frame.dispose();
-		DockA gui = new DockA();
+		Dock0 a =new Dock0();
+		Dock da;
+		da = FileOpeDock.fetchOneDock("A");
+		DockA gui = new DockA(da);
 		gui.go();
 		}
 	else if (e.getSource() == button2) {
 		frame.dispose();
-		DockA gui = new DockA();
+		Dock da;
+		da = FileOpeDock.fetchOneDock("B");
+		DockA gui = new DockA(da);
 		gui.go();
 		gui.label1.setText("           DOCK    B");
 		}
 	else if (e.getSource() == button3) {
 		frame.dispose();
-		DockA gui = new DockA();
+		Dock da;
+		da = FileOpeDock.fetchOneDock("C");
+		DockA gui = new DockA(da);
 		gui.go();
 		gui.label1.setText("           DOCK    C");
 		}

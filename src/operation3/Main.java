@@ -1,9 +1,22 @@
 package operation3;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 public class Main {
 	public static void main(String[] args)
 	{
+//		User a=FileOpe.fetchOneUser("161188232");
+//		a.setAcState(true);
+//		FileOpe.updateUser(a);
+		//FileOpe.viewUser();
+		//
+//		FileOpe.temptest();
+		
+//		Date date = new Date();
+//		long a = date.getTime();
+//		System.out.println(a);
+//		date.setTime(a);
+//		System.out.println(date);
 //		FileOpe.temptest();
 //		
 //		User b=new User();
@@ -31,7 +44,7 @@ public class Main {
 //		
 //		for(User temp:create)
 //		{
-//			System.out.println(temp.getUsState());
+//			System.out.println(temp.getId());
 //		}
 //		FileOpe.deleteUser(b);
 //		test=FileOpe.fetchOneUser("2016213515");
@@ -40,31 +53,32 @@ public class Main {
 //		FileOpe.viewUser();
 //		Select a = new Select();
 		
-		Dock A= new Dock();
-		A.dockId="A";
-		Dock B= new Dock();
-		B.dockId="B";
-		Dock C= new Dock();
-		C.dockId="C";
+//		Dock A= new Dock();
+//		A.dockId="A";
+//		Dock B= new Dock();
+//		B.dockId="B";
+//		Dock C= new Dock();
+//		C.dockId="C";
+//		
+//		ArrayList<Dock> create = new ArrayList<Dock>();
+//		create.add(A);
+//		create.add(B);
+//		create.add(C);
+//		FileOpeDock.writeFileDock(create);
 		
-		ArrayList<Dock> create = new ArrayList<Dock>();
-		create.add(A);
-		create.add(B);
-		create.add(C);
-		FileOpeDock.writeFileDock(create);
 		
-		Dock test;
-		test=FileOpeDock.fetchOneDock("A");
-		test.latch[0]=true;
-		FileOpeDock.updateDock(test);
-		create=FileOpeDock.fetchAllDocks();
-		
-		for(Dock temp:create)
-		{
-			System.out.println(temp.dockId+""+temp.isFull());
+//		Dock test;
+//		test=FileOpeDock.fetchOneDock("A");
+//		test.latch[0]=true;
+//		FileOpeDock.updateDock(test);
+//		create=FileOpeDock.fetchAllDocks();
+//		
+//		for(Dock temp:create)
+//		{
+//			System.out.println(temp.dockId+""+temp.isFull());
 //			System.out.println(temp.isFull());
-			
-		}
+//			
+//		}
 		
 		
 		

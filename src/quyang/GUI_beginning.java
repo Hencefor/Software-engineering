@@ -23,10 +23,12 @@ public class GUI_beginning implements ActionListener {
  public static void main (String[] args) {
 	GUI_beginning gui = new GUI_beginning();
 	gui.go();
+	
  }
  
  public void go() {
-	//
+	frame.setSize(800, 800);//set hight and width	
+	 frame.setLocationRelativeTo(null);// set in middle
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setLayout(null);
 	
@@ -83,12 +85,12 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 		if (e.getSource() == button1) {
 			frame.dispose();
-			System gui = new System();
+			System0 gui = new System0();
 			gui.go();
 			}
 		else if (e.getSource() == button2) {
 			frame.dispose();
-			Dock gui = new Dock();
+			Dock0 gui = new Dock0();
 			gui.go();
 			}
 

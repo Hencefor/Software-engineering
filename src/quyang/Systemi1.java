@@ -1,5 +1,5 @@
 package quyang;
-
+import operation3.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -48,6 +48,7 @@ public class Systemi1 implements ActionListener {
 	Font bigFont = new Font("serif",Font.BOLD,30);
 	button1.setFont(bigFont);
 	button1.setForeground(Color.WHITE);
+	button1.addActionListener(this);
 	
 	frame.getContentPane().add(button2);
 	button2.setBounds(60,512,320,70);
@@ -80,13 +81,19 @@ public void actionPerformed(ActionEvent e) {
 	
 	if (e.getSource() == button3) {
 		frame.dispose();
-		System gui = new System();
+		System0 gui = new System0();
 		gui.go();
 		}
 	else if (e.getSource() == button2) {
 		frame.dispose();
+		
 		Systemi2_1 gui = new Systemi2_1();
 		gui.go();
+		}
+	else if (e.getSource() == button1) {
+		
+		
+		FileOpe.viewUser();
 		}
 	
 }

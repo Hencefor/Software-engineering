@@ -12,25 +12,51 @@ public class FileOpe {/**/
 	
 	public static void temptest()/**/
 	{
-		
+		//
+		User f = new User();
+		User g = new User();
 		User d = new User();
 		User b=new User();
 		User c=new User();
-		b.setId("ldc");
-		b.setEmail("ldc@qq");
+		b.setId("000000001");
+		b.setName("ljw");
+		b.setEmail("ljw@qq.com");
 		b.setAcState(false);
 		b.setUsState(false);
 		b.counter=0;
-		c.setId("csc");
-		c.setEmail("csc@qq");
-		c.setAcState(true);
-		c.setUsState(true);
+		c.setId("000000002");
+		c.setName("csc");
+		c.setEmail("csc@qq.com");
+		c.setAcState(false);
+		c.setUsState(false);
 		c.counter=0;
+		d.setId("000000003");
+		d.setName("jmd");
+		d.setEmail("jmd@qq.com");
+		d.setAcState(false);
+		d.setUsState(false);
+		d.counter=0;
+		g.setId("000000004");
+		g.setName("qy");
+		g.setEmail("qy@qq.com");
+		g.setAcState(false);
+		g.setUsState(false);
+		g.counter=0;
+		f.setId("000000005");
+		f.setName("zhr");
+		f.setEmail("zhr@qq.com");
+		f.setAcState(false);
+		f.setUsState(false);
+		f.counter=0;
 		try {
 			FileOutputStream fs= new FileOutputStream("UserInfor.ser");
 			ObjectOutputStream os=new ObjectOutputStream(fs);
 				
 				os.writeObject(b);
+				os.writeObject(c);
+				os.writeObject(d);
+				os.writeObject(f);
+				os.writeObject(g);
 				
 			os.close();
 		} 

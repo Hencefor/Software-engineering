@@ -4,12 +4,22 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import operation3.*;
 
 public class Dock2_2  implements ActionListener {
+	Dock da;
+	User us;
+	public Dock2_2(Dock x, User y) {
+		da = x;
+		us = y;
+	}
 	
 	JFrame frame = new JFrame();
 
@@ -21,7 +31,7 @@ public class Dock2_2  implements ActionListener {
 	 JLabel label3 = new JLabel("Light",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	 JLabel label5 = new JLabel("Use Time: 1 : 30",JLabel.CENTER);
-	 
+	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,7 +69,12 @@ public class Dock2_2  implements ActionListener {
 		button2.addActionListener(this);
 		
 		
+		//int position = da.retrieveScooter();
+		//da.releaseScooter();
+	
+		
 			frame.getContentPane().add(label3);
+			//label3.setText(position+"");
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
@@ -80,7 +95,6 @@ public class Dock2_2  implements ActionListener {
 			label5.setFont(new java.awt.Font("serif", 1, 25));
 			label5.setForeground(Color.WHITE);
 			
-			MyThread  mt = new MyThread(label4,label3);
 			mt.act();
 			//button1.addActionListener(t);
 			
@@ -94,10 +108,11 @@ public class Dock2_2  implements ActionListener {
 		// TODO Auto-generated method stub
 		if (e.getSource() == button2) {
 			frame.dispose();
-			Dock1 gui = new Dock1();
+			Dock1 gui = new Dock1(da,us);
 			String a = label1.getText();
 			if (a == "           DOCK    A") {
 				gui.go();
+				
 			}
 			if (a == "           DOCK    B") {
 				gui.go();
@@ -107,22 +122,29 @@ public class Dock2_2  implements ActionListener {
 				gui.go();
 				gui.label1.setText("           DOCK    C");
 			}
+			mt.cancel();
 		}
 		else if (e.getSource() == button1) {
 			frame.dispose();
-			Dock3 gui = new Dock3();
+			Dock0 gui = new Dock0();
 			String a = label1.getText();
-			if (a == "           DOCK    A") {
-				gui.go();
-			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
-			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
-			}
+			
+			us.notUsingSc();
+			Date time= new Date();
+			long c = time.getTime();
+			long r = us.timeuse(c);
+			if(r<=1800)
+				us.setAcState(false);
+			us.addDuration(r);
+			da.retrieveScooter();
+
+			FileOpe.updateUser(us);
+			FileOpeDock.updateDock(da);
+			
+			JOptionPane.showMessageDialog(null,"You have returned the scooter successfully!");
+			
+			gui.go();
+			mt.cancel();
 		}
 	}
 

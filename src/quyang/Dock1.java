@@ -1,6 +1,7 @@
 package quyang;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,9 +9,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import operation3.*;
 
 public class Dock1 implements ActionListener  {
-	
+	Dock da;
+	User us;
+	public Dock1(Dock x, User y) {
+		da = x;
+		us = y;
+	}
 	
 	JFrame frame = new JFrame();
 	JButton button1 = new JButton("Pick");
@@ -84,43 +93,71 @@ public class Dock1 implements ActionListener  {
 
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		boolean user_usS,user_acS;
+		boolean dock_em,dock_full;
+		user_acS = us.getAcState();
+		
+		
+		user_usS = us.getUsState();
+		
+		dock_em = da.isEmpty();
+		dock_full = da.isFull();
 		if (e.getSource() == button1) {
-			frame.dispose();
-			Dock2_1 gui = new Dock2_1();
-			String a = label1.getText();
-			if (a == "           DOCK    A") {
-				gui.go();
+			if(user_usS==false && user_acS==false && dock_em==false) {
+				frame.dispose();
+				Dock2_1 gui = new Dock2_1(da,us);
+				String a = label1.getText();
+				if (a == "           DOCK    A") {
+					gui.go();
+				}
+				if (a == "           DOCK    B") {
+					gui.go();
+					gui.label1.setText("           DOCK    B");
+				}
+				if (a == "           DOCK    C") {
+					gui.go();
+					gui.label1.setText("           DOCK    C");
+				}
 			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
+			else if(user_usS==false && user_acS==false && dock_em==true){
+				//µ¯´°
+				JOptionPane.showMessageDialog(null,"There is no scooter in this dock!");
 			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
+			else if(user_usS==true || user_acS==true ) {
+				//µ¯´°
+				JOptionPane.showMessageDialog(null,"You need to return the scooter for pay the bill first!");
 			}
 		
 		}
 		else if (e.getSource() == button2) {
-			frame.dispose();
-			Dock2_2 gui = new Dock2_2();
-			String a = label1.getText();
-			if (a == "           DOCK    A") {
-				gui.go();
+			if(user_usS==true && dock_full==false) {
+				frame.dispose();
+				Dock2_2 gui = new Dock2_2(da,us);
+				String a = label1.getText();
+				if (a == "           DOCK    A") {
+					gui.go();
+				}
+				if (a == "           DOCK    B") {
+					gui.go();
+					gui.label1.setText("           DOCK    B");
+				}
+				if (a == "           DOCK    C") {
+					gui.go();
+					gui.label1.setText("           DOCK    C");
+				}
 			}
-			if (a == "           DOCK    B") {
-				gui.go();
-				gui.label1.setText("           DOCK    B");
+			else if(dock_full==true && user_usS==true){
+				//µ¯´°
+				JOptionPane.showMessageDialog(null,"There is no empty slot in this dock!");
 			}
-			if (a == "           DOCK    C") {
-				gui.go();
-				gui.label1.setText("           DOCK    C");
+			else if(user_usS==false ) {
+				//µ¯´°
+				JOptionPane.showMessageDialog(null,"You didn't pick a scooter!");
 			}
-		
 		}
 		else if (e.getSource() == button3) {
 			frame.dispose();
-			Dock gui = new Dock();
+			Dock0 gui = new Dock0();
 			gui.go();
 		
 		}

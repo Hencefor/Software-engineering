@@ -3,13 +3,13 @@ import java.io.Serializable;
 public class Dock implements Serializable{
 	
 	//boolean[] latch= {true,true,true,true,true,false,false,false};
-	boolean[] latch= {false,true,true,true,true,true,true,true};
+	boolean[] latch= {true,true,true,true,true,false,false,false};
 	int i;
 	String dockId;
 	
 	public int releaseScooter()/*turn one latch to false if there is a latch has scooter(in order),return the position of latch */
 	{
-		int position=0;
+		int position=1;
 		
 		try {
 			while(position<=8)
@@ -35,7 +35,7 @@ public class Dock implements Serializable{
 	}
 	public int retrieveScooter()/*turn one latch to true if there is a empty latch, return the postion of the latchf*/
 	{
-		int position=0;
+		int position=1;
 		try {
 			while(position<=8)
 			{
@@ -71,11 +71,11 @@ public class Dock implements Serializable{
 				count++;
 			}
 		}
-		if(count<=8 && count>0)
+		if(count==8)
 		{
 			return true;
 		}
-		else if(count==0)
+		else if(count<8&&count>=0)
 		{
 			return false;
 		}
@@ -102,7 +102,22 @@ public class Dock implements Serializable{
 		}
 		return false;
 	}
-
+	public int numOflatch()
+	{
+		return latch.length;
+	}
+	public int numOfSco()
+	{
+		int count=0;
+		for(int i=0;i<8;i++)
+		{
+			if(latch[i]==true)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
 	
 	public static void main(String[] args)
 	{

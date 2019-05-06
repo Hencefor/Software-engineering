@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class System implements ActionListener {
+public class System0 implements ActionListener {
 	
 	public static Object out;
 	JFrame frame = new JFrame();

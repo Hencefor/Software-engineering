@@ -19,6 +19,7 @@ public class Dock1 implements ActionListener  {
 	public Dock1(Dock x, User y) {
 		da = x;
 		us = y;
+		
 	}
 	
 	JFrame frame = new JFrame();

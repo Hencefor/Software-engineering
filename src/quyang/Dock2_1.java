@@ -25,7 +25,6 @@ public class Dock2_1  implements ActionListener {
 		us = y;
 	}
 	
-	int position = da.returnPositionPick();
    
 	JFrame frame = new JFrame();
 
@@ -33,7 +32,7 @@ public class Dock2_1  implements ActionListener {
 	 JButton button2 = new JButton("Exit");
 	 JLabel label1 = new JLabel("           DOCK    A");
 	 JLabel label2 = new JLabel("<html>Waiting for Check<br>......</html>",JLabel.CENTER);
-	 JLabel label3 = new JLabel(position+"",JLabel.CENTER);
+	 JLabel label3 = new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	 MyThread  mt;
 	 public void go() {

@@ -108,7 +108,7 @@ public class User implements Serializable{
 //	
 	public long timeuse(long k)/*when return a scooter, this will return the duration of single using*/
 	{
-		long b=pickTime-k;
+		long b=k-pickTime;
 		
 		return b;
 	}

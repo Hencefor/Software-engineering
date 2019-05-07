@@ -25,7 +25,7 @@ public class System0 implements ActionListener {
 	
 	
 	public void go() {
-		
+		//frame.getContentPane().setBackground(Color.BLACK);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		

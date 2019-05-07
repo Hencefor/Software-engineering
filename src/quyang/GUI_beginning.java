@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import operation3.FileOpe;
+
 public class GUI_beginning implements ActionListener {
  
  
@@ -21,6 +23,7 @@ public class GUI_beginning implements ActionListener {
  JLabel label3 = new JLabel();
  
  public static void main (String[] args) {
+	 FileOpe.viewUser();
 	GUI_beginning gui = new GUI_beginning();
 	gui.go();
 	

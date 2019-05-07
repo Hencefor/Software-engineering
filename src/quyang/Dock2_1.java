@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,15 +24,17 @@ public class Dock2_1  implements ActionListener {
 		da = x;
 		us = y;
 	}
+	
+	int position = da.returnPositionPick();
+   
 	JFrame frame = new JFrame();
 
 	 JButton button1 = new JButton("Check");
 	 JButton button2 = new JButton("Exit");
 	 JLabel label1 = new JLabel("           DOCK    A");
 	 JLabel label2 = new JLabel("<html>Waiting for Check<br>......</html>",JLabel.CENTER);
-	 JLabel label3 = new JLabel("Light",JLabel.CENTER);
+	 JLabel label3 = new JLabel(position+"",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
-	 JLabel label5 = new JLabel("Use Time: 1 : 30",JLabel.CENTER);
 	 MyThread  mt;
 	 public void go() {
 		MyThread  m = new MyThread(label1,label4,label3,frame,da,us);
@@ -69,12 +73,9 @@ public class Dock2_1  implements ActionListener {
 		button2.setForeground(Color.WHITE);
 		button2.addActionListener(this); 
 			
-		//int position=da.releaseScooter();
-		//da.retrieveScooter();
-		
-		
+			
 			frame.getContentPane().add(label3);
-			//label3.setText(position+"");
+			
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);

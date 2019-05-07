@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -21,16 +22,24 @@ public class Dock2_2  implements ActionListener {
 		us = y;
 	}
 	
-	JFrame frame = new JFrame();
+	Date time= new Date();
+	long c = time.getTime();
+	long r = us.timeuse(c);
+    Date date = new Date(r);
+    SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
+    String useTime = sd.format(date);
 
+	
+	JFrame frame = new JFrame();
+		
 	 JButton button1 = new JButton("Check");
 	 JButton button2 = new JButton("Exit");
 	 JLabel label1 = new JLabel("           DOCK    A");
 	 JLabel label2 = new JLabel("<html>Waiting for Return"
 	 		+ "<br>......</html>",JLabel.CENTER);
-	 JLabel label3 = new JLabel("Light",JLabel.CENTER);
+	 JLabel label3 = new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
-	 JLabel label5 = new JLabel("Use Time: 1 : 30",JLabel.CENTER);
+	 JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
 	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
 		
@@ -69,12 +78,9 @@ public class Dock2_2  implements ActionListener {
 		button2.addActionListener(this);
 		
 		
-		//int position = da.retrieveScooter();
-		//da.releaseScooter();
-	
 		
 			frame.getContentPane().add(label3);
-			//label3.setText(position+"");
+			
 			label3.setBounds(0,780,70,70);
 			label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
@@ -130,9 +136,7 @@ public class Dock2_2  implements ActionListener {
 			String a = label1.getText();
 			
 			us.notUsingSc();
-			Date time= new Date();
-			long c = time.getTime();
-			long r = us.timeuse(c);
+			
 			if(r<=1800)
 				us.setAcState(false);
 			us.addDuration(r);

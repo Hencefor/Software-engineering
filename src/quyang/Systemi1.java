@@ -91,7 +91,9 @@ public void actionPerformed(ActionEvent e) {
 		gui.go();
 		}
 	else if (e.getSource() == button1) {
-		
+		frame.dispose();
+		UserCheck gui = new UserCheck();
+		gui.go();
 		
 		FileOpe.viewUser();
 		}

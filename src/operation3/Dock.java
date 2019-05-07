@@ -59,6 +59,7 @@ public class Dock implements Serializable{
 		return position;
 	}
 		
+	
 		public int returnPositionReturn()
 		{
 			int position=1;
@@ -83,6 +84,8 @@ public class Dock implements Serializable{
 		}
 		return position;
 	}
+		
+		
 	public int retrieveScooter()/*turn one latch to true if there is a empty latch, return the postion of the latchf*/
 	{
 		int position=1;

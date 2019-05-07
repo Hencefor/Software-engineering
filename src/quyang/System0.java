@@ -14,15 +14,12 @@ public class System0 implements ActionListener {
 	
 	public static Object out;
 	JFrame frame = new JFrame();
-	JButton button1 = new JButton("Creat");
+	JButton button1 = new JButton("Create");
 	JButton button2 = new JButton("Pay");
 	JButton button3 = new JButton("Information");
 	JButton button4 = new JButton("Exit");
 	JLabel label1 = new JLabel("SYSTEM",JLabel.CENTER);
 	JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
-	
-	
-	
 	
 	public void go() {
 		//frame.getContentPane().setBackground(Color.BLACK);

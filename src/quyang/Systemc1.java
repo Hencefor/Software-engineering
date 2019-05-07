@@ -84,21 +84,21 @@ public class Systemc1 implements ActionListener  {
 		tf2.setBounds(100,360,430,60);
 		//tf2.setBackground(Color.BLACK);
 		tf2.setFont(new java.awt.Font("serif", 1, 25));
-		tf2.setForeground(Color.WHITE);
+		//tf2.setForeground(Color.WHITE);
 
 		frame.getContentPane().add(label5);
 		label5.setBounds(0,420,100,60);
 		//label5.setBackground(Color.YELLOW);
 		label5.setOpaque(true);
 		label5.setFont(new java.awt.Font("serif", 1, 30));
-		label5.setForeground(Color.BLACK);
+		//label5.setForeground(Color.BLACK);
 		
 		frame.getContentPane().add(tf3);
 		tf3.setHorizontalAlignment(JTextField.LEADING);
 		tf3.setBounds(100,420,430,60);
 		//tf3.setBackground(Color.BLACK);
 		tf3.setFont(new java.awt.Font("serif", 1, 25));
-		tf3.setForeground(Color.WHITE);
+		//tf3.setForeground(Color.WHITE);
 		
 		frame.getContentPane().add(button1);
 		button1.setBounds(60,540,320,70);

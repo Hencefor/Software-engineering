@@ -53,18 +53,18 @@ public class Main {
 //		FileOpe.viewUser();
 //		Select a = new Select();
 		
-//		Dock A= new Dock();
-//		A.dockId="A";
-//		Dock B= new Dock();
-//		B.dockId="B";
-//		Dock C= new Dock();
-//		C.dockId="C";
-//		
-//		ArrayList<Dock> create = new ArrayList<Dock>();
-//		create.add(A);
-//		create.add(B);
-//		create.add(C);
-//		FileOpeDock.writeFileDock(create);
+		Dock A= new Dock();
+		A.dockId="A";
+		Dock B= new Dock();
+		B.dockId="B";
+		Dock C= new Dock();
+		C.dockId="C";
+		
+		ArrayList<Dock> create = new ArrayList<Dock>();
+		create.add(A);
+		create.add(B);
+		create.add(C);
+		FileOpeDock.writeFileDock(create);
 		
 		
 //		Dock test;

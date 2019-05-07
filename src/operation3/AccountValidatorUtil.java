@@ -4,7 +4,7 @@ public class AccountValidatorUtil {
     /**
      * 
      */
-    public static final String REGEX_USERNAME = "^[a-zA-Z]\\w{3,20}$";
+    public static final String REGEX_USERNAME = "^[a-zA-Z]{3,20}$";
  
     /**
      * 

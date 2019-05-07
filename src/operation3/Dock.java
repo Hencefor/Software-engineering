@@ -15,9 +15,9 @@ public class Dock implements Serializable{
 			while(position<=8)
 			{
 				
-				if(latch[position]==true)
+				if(latch[position-1]==true)
 				{
-					latch[position]=false;
+					latch[position-1]=false;
 					break;
 				}
 				position++;
@@ -32,6 +32,31 @@ public class Dock implements Serializable{
 		}
 		return position;
 		
+	}
+	
+	public int returnPosition()
+	{
+		int position=1;
+		
+		try {
+			while(position<=8)
+			{
+				
+				if(latch[position-1]==true)
+				{
+					return position;
+				}
+				position++;
+				
+			}
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("error in release");
+			return -1;
+		}
+		return position;
 	}
 	public int retrieveScooter()/*turn one latch to true if there is a empty latch, return the postion of the latchf*/
 	{

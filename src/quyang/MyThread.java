@@ -6,7 +6,7 @@ import operation3.*;
 import java.awt.event.*;
 import java.awt.*;
 public class MyThread extends Thread implements Runnable {
-	int time = 60;
+	int time = 10;
 	public volatile boolean exit = false;
 	JLabel label, l2,lx;
 	JFrame frame;

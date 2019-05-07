@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import operation3.FileOpe;
+import operation3.ResetDay;
 
 public class GUI_beginning implements ActionListener {
  
@@ -24,6 +25,9 @@ public class GUI_beginning implements ActionListener {
  
  public static void main (String[] args) {
 	 FileOpe.viewUser();
+	 
+	 ResetDay a = new ResetDay();
+	 a.start();
 	GUI_beginning gui = new GUI_beginning();
 	gui.go();
 	

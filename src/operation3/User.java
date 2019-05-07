@@ -118,10 +118,13 @@ public class User implements Serializable{
 		judgeDuration();
 	}
 	
-	
+	public void resetDayDuration()
+	{
+		dayDuration=0;
+	}
 	public void judgeDuration()/*judge if the duration is invalid*/
 	{
-		if(this.dayDuration > 7200000)
+		if(this.dayDuration > 100*1000)
 		{
 			fine();
 		}

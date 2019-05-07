@@ -34,7 +34,7 @@ public class Dock implements Serializable{
 		
 	}
 	
-	public int returnPosition()
+	public int returnPositionPick()
 	{
 		int position=1;
 		
@@ -50,6 +50,31 @@ public class Dock implements Serializable{
 				
 			}
 		}
+		catch(Exception e)
+		{
+			System.out.println("error in release");
+			return -1;
+		
+		}
+		return position;
+	}
+		
+		public int returnPositionReturn()
+		{
+			int position=1;
+			
+			try {
+				while(position<=8)
+				{
+					
+					if(latch[position-1]==false)
+					{
+						return position;
+					}
+					position++;
+					
+				}
+			}
 		
 		catch(Exception e)
 		{
@@ -64,9 +89,9 @@ public class Dock implements Serializable{
 		try {
 			while(position<=8)
 			{
-				if(latch[position]==false)
+				if(latch[position-1]==false)
 				{
-					latch[position]=true;
+					latch[position-1]=true;
 					break;
 				}
 				position++;

@@ -42,7 +42,7 @@ public class UserCheck implements ActionListener{
         
         try {
            //调用File
-        	//打开file
+        	
                            
             String sname = null;
             String ssex = null;
@@ -51,10 +51,10 @@ public class UserCheck implements ActionListener{
             String sregion = null;
             String sgroup = null;
             String scomp = null;
-            Integer sgrade ;
+          //  Integer sgrade ;
           
             
-         		while(/*rs.next()*/){						//	当文件中还有内容时循环
+         		while(rs.next()){						//	当文件中还有内容时循环
                // sname = rs.getString("mname");
             										//文件类归到上面定义的变量
                 data[i] = new Object[8];			//	8为列数可变

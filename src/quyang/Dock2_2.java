@@ -21,13 +21,13 @@ public class Dock2_2  implements ActionListener {
 		da = x;
 		us = y;
 	}
-	
+	Date use;
 	Date time= new Date();
 	long c = time.getTime();
 	long r = us.timeuse(c);
     Date date = new Date(r);
     SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
-    String useTime = sd.format(date);
+    String useTime = sd.format(date);			
 
 	
 	JFrame frame = new JFrame();

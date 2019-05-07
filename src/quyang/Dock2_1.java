@@ -34,6 +34,7 @@ public class Dock2_1  implements ActionListener {
 	 JLabel label2 = new JLabel("<html>Waiting for Check<br>......</html>",JLabel.CENTER);
 	 JLabel label3 = new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
+	// Jlabel label5
 	 MyThread  mt;
 	 public void go() {
 		MyThread  m = new MyThread(label1,label4,label3,frame,da,us);

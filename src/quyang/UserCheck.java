@@ -12,6 +12,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 
+import operation3.User;
+
 public class UserCheck implements ActionListener{
 	JFrame frame = new JFrame();
 	
@@ -21,46 +23,45 @@ public class UserCheck implements ActionListener{
 	
 	public void go() { 
 		
-		
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		frame.setSize(800, 800);
-        String[] columnNames = {"ÐÕÃû",
-                "ÐÔ±ð",
-                "³öÉúÈÕÆÚ",
-                "Éí·ÝÖ¤ºÅ",                      //tableÖÐÁÐµÄÃû³Æ£¬ÓÐ¼¸ÁÐÐ´¼¸¸ö
-                "µØÇø",
-                "ËùÊôÍÅÌå",
-                "²Î¼Ó¹ýµÄÈüÊÂ",
-                "ÈüÊÂ³É¼¨"};
+        String[] columnNames = {"ï¿½ï¿½ï¿½ï¿½",
+                "ï¿½Ô±ï¿½",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+                "ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½",                      //tableï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
+                "ï¿½ï¿½ï¿½ï¿½",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+                "ï¿½Î¼Ó¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+                "ï¿½ï¿½ï¿½Â³É¼ï¿½"};
         Object[][] data = new Object[100000][];
         
         int i=0,j;
         
-        //GUIÑéÊ±¿ÉÏÈÉ¾È¥try-catch
+        //GUIï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½É¾È¥try-catch
         
         try {
-           //µ÷ÓÃFile
+           //ï¿½ï¿½ï¿½ï¿½File
         	
                            
             String sname = null;
             String ssex = null;
             String sbirth = null;
-            String sID = null;                     //¿É¸ù¾ÝÐèÒª¸ü¸ÄÁÐÊý¼°ÁÐµÄÃû³Æ
+            String sID = null;                     //ï¿½É¸ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
             String sregion = null;
             String sgroup = null;
             String scomp = null;
-          //  Integer sgrade ;
+           Integer sgrade ;
           
-            
-         		while(rs.next()){						//	µ±ÎÄ¼þÖÐ»¹ÓÐÄÚÈÝÊ±Ñ­»·
+                User us;
+         		while(us.next()){						//	ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ñ­ï¿½ï¿½
                // sname = rs.getString("mname");
-            										//ÎÄ¼þÀà¹éµ½ÉÏÃæ¶¨ÒåµÄ±äÁ¿
-                data[i] = new Object[8];			//	8ÎªÁÐÊý¿É±ä
+            										//ï¿½Ä¼ï¿½ï¿½ï¿½éµ½ï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+                data[i] = new Object[8];			//	8Îªï¿½ï¿½ï¿½ï¿½ï¿½É±ï¿½
                 data[i][0] = sname;
                 data[i][1] = ssex;
-                data[i][2] = sbirth;				//½«±äÁ¿·ÅÈëobjectÖÐ
+                data[i][2] = sbirth;				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½objectï¿½ï¿½
                 data[i][3] = sID;
                 data[i][4] = sregion;
                 data[i][5] = sgroup;
@@ -68,15 +69,17 @@ public class UserCheck implements ActionListener{
                 data[i][7] = sgrade;
                 i++;
             }
-            //rs.close();						¹Ø±Õfile£¬Êý¾Ý¿âÐèÒª£¬fileope²»ÖªµÀ   ¨“¨Œ¨“
+            //rs.close();						ï¿½Ø±ï¿½fileï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½Òªï¿½ï¿½fileopeï¿½ï¿½Öªï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             //con.close();
         } catch(ClassNotFoundException e1) {   
-            //Êý¾Ý¿âÇý¶¯ÀàÒì³£´¦Àí
+            //ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
             System.out.println("Sorry,can`t find the Driver!");   
             e1.printStackTrace();   
-            } catch(SQLException e1) {
-            e1.printStackTrace();  				//catch µÄÊÇÊý¾Ý¿âµÄÎÊÌâ£¬fileÐèÒª¸Ä
-            }catch (Exception e1) {
+            } 
+            //catch(SQLException e1) {
+            //e1.printStackTrace();  				//catch ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½â£¬fileï¿½ï¿½Òªï¿½ï¿½
+            //}
+	        catch (Exception e1) {
             e1.printStackTrace();
             }
         
@@ -91,34 +94,34 @@ public class UserCheck implements ActionListener{
         JScrollPane scrollPane = new JScrollPane();
         
         
-        TableColumn firsetColumn0 = table.getColumnModel().getColumn(2);			//ÉèÖÃÁÐ¿í£¬ÁÐÊýÎª£¨n+1£©£¨´Ó0¿ªÊ¼£©
+        TableColumn firsetColumn0 = table.getColumnModel().getColumn(2);			//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½n+1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½Ê¼ï¿½ï¿½
         firsetColumn0.setPreferredWidth(150);										
-        TableColumn firsetColumn = table.getColumnModel().getColumn(3);				//ÉèÖÃÁÐ¿í
+        TableColumn firsetColumn = table.getColumnModel().getColumn(3);				//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½
         firsetColumn.setPreferredWidth(220);
-        TableColumn firsetColumn1 = table.getColumnModel().getColumn(5);			//ÉèÖÃÁÐ¿í
+        TableColumn firsetColumn1 = table.getColumnModel().getColumn(5);			//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½
         firsetColumn1.setPreferredWidth(220);
-        TableColumn firsetColumn2 = table.getColumnModel().getColumn(6);			//ÉèÖÃÁÐ¿í
+        TableColumn firsetColumn2 = table.getColumnModel().getColumn(6);			//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½
         firsetColumn2.setPreferredWidth(220);
-        table.setRowHeight(50);														//ÉèÖÃÐÐ¿í
+        table.setRowHeight(50);														//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½
         
         
         JTableHeader head = table.getTableHeader();
         
         
-        head.setPreferredSize(new Dimension(head.getWidth(), 35));                 // ÉèÖÃ±íÍ·´óÐ¡
-        head.setFont(new Font("¿¬Ìå", Font.PLAIN, 18));								// ÉèÖÃ±íÍ·×ÖÌå
-        table.setFont(new Font("¿¬Ìå", Font.PLAIN, 18));								// ÉèÖÃ±íÄÚÈÝ×ÖÌå
+        head.setPreferredSize(new Dimension(head.getWidth(), 35));                 // ï¿½ï¿½ï¿½Ã±ï¿½Í·ï¿½ï¿½Ð¡
+        head.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 18));								// ï¿½ï¿½ï¿½Ã±ï¿½Í·ï¿½ï¿½ï¿½ï¿½
+        table.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 18));								// ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         
         
         scrollPane.getViewport().add(table);
         
         
-		return1 = new JButton("·µ»Ø");
-		return1.setBounds(1000, 550,150, 40);										//buttonÉèÖÃ
-		return1.setFont(new Font("ºÚÌå", Font.BOLD, 30));
+		return1 = new JButton("ï¿½ï¿½ï¿½ï¿½");
+		return1.setBounds(1000, 550,150, 40);										//buttonï¿½ï¿½ï¿½ï¿½
+		return1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 30));
 
 		
-		scrollPane.setBounds(50, 50,1100, 500);									//tableÎ»ÖÃÉèÖÃ
+		scrollPane.setBounds(50, 50,1100, 500);									//tableÎ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		frame.add(return1);
 		
 		frame.add(scrollPane);

@@ -79,7 +79,7 @@ public class MyThread extends Thread implements Runnable {
         	threads.interrupt(); 
 			threads.join();
 		} catch (InterruptedException e) {
-			
+			//e.printStackTrace();
 		} 
 	}
 }

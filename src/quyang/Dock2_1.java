@@ -32,7 +32,7 @@ public class Dock2_1  implements ActionListener {
 	 JButton button2 = new JButton("Exit");
 	 JLabel label1 = new JLabel("           DOCK    A");
 	 JLabel label2 = new JLabel("<html>Waiting for Check<br>......</html>",JLabel.CENTER);
-	 JLabel label3 = new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
+	 JLabel label3 ;
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	// Jlabel label5
 	 MyThread  mt;
@@ -75,7 +75,7 @@ public class Dock2_1  implements ActionListener {
 		//button2.setForeground(Color.WHITE);
 		button2.addActionListener(this); 
 			
-			
+			label3= new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
 			frame.getContentPane().add(label3);
 			
 			label3.setBounds(0,780,70,70);

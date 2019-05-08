@@ -17,17 +17,20 @@ import operation3.*;
 public class Dock2_2  implements ActionListener {
 	Dock da;
 	User us;
+	long c,r;
+	String useTime;
 	public Dock2_2(Dock x, User y) {
 		da = x;
 		us = y;
+		Date use;
+		Date time= new Date();
+		c = time.getTime();
+		r = us.timeuse(c);
+		Date date = new Date(r);
+		SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
+		useTime = sd.format(date);
 	}
-	Date use;
-	Date time= new Date();
-	long c = time.getTime();
-	long r = us.timeuse(c);
-    Date date = new Date(r);
-    SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
-    String useTime = sd.format(date);			
+				
 
 	
 	JFrame frame = new JFrame();
@@ -37,11 +40,12 @@ public class Dock2_2  implements ActionListener {
 	 JLabel label1 = new JLabel("           DOCK    A");
 	 JLabel label2 = new JLabel("<html>Waiting for Return"
 	 		+ "<br>......</html>",JLabel.CENTER);
-	 JLabel label3 = new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
+	 JLabel label3 = new JLabel("",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
-	 JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
+	 
 	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
+		JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,7 +83,7 @@ public class Dock2_2  implements ActionListener {
 		button2.addActionListener(this);
 		
 		
-		
+		label3.setText(da.returnPositionPick()+"");
 			frame.getContentPane().add(label3);
 			
 			label3.setBounds(0,780,70,70);

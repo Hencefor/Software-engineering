@@ -26,8 +26,8 @@ public class GUI_beginning implements ActionListener {
  public static void main (String[] args) {
 	 FileOpe.viewUser();
 	 
-	 ResetDay a = new ResetDay();
-	 a.start();
+//	 ResetDay a = new ResetDay();
+//	 a.start();
 	GUI_beginning gui = new GUI_beginning();
 	gui.go();
 	

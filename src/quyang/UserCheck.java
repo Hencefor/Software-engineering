@@ -7,79 +7,85 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 
+import operation3.FileOpe;
 import operation3.User;
 
 public class UserCheck implements ActionListener{
 	JFrame frame = new JFrame();
 	
 	
-	JButton return1;
+	JButton return1= new JButton("Return");
 
 	
 	public void go() { 
 		
+		
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
-		frame.setSize(800, 800);
-        String[] columnNames = {"����",
-                "�Ա�",
-                "��������",
-                "���֤��",                      //table���е����ƣ��м���д����
-                "����",
-                "��������",
-                "�μӹ�������",
-                "���³ɼ�"};
-        Object[][] data = new Object[100000][];
+		frame.setSize(1500, 1500);
+        String[] columnNames = {"Name",
+                "ID",
+                "Email",
+                "AccountState",                      //
+                "UsingState"};
+        Object[][] data = new Object[100][];
         
         int i=0,j;
         
-        //GUI��ʱ����ɾȥtry-catch
+        //GUI��ʱ����ɾȥtry-catch
         
         try {
-           //����File
+           //����File
         	
                            
             String sname = null;
-            String ssex = null;
-            String sbirth = null;
-            String sID = null;                     //�ɸ�����Ҫ�����������е�����
-            String sregion = null;
-            String sgroup = null;
-            String scomp = null;
-           Integer sgrade ;
+            String id = null;
+            String email = null;
+            String acState = null;                     //
+            String usState = null;
+            String dayDuration = null;
+           // String scomp = null;
+          //  Integer sgrade ;
+            ArrayList<User> a= new ArrayList<User>();
+            a=FileOpe.fetchAllUsers();
           
-                User us;
-         		while(us.next()){						//	���ļ��л�������ʱѭ��
-               // sname = rs.getString("mname");
-            										//�ļ���鵽���涨��ı���
-                data[i] = new Object[8];			//	8Ϊ�����ɱ�
-                data[i][0] = sname;
-                data[i][1] = ssex;
-                data[i][2] = sbirth;				//����������object��
-                data[i][3] = sID;
-                data[i][4] = sregion;
-                data[i][5] = sgroup;
-                data[i][6] = scomp;
-                data[i][7] = sgrade;
+            for(User b:a)
+            {
+            	data[i] = new Object[5];			//	
+                data[i][0] = b.getName();
+                data[i][1] = b.getId();
+                data[i][2] = b.getEmail();				//
+                data[i][3] = String.valueOf(b.getAcState());
+                data[i][4] = String.valueOf(b.getUsState());
+                //data[i][5] = b.;
                 i++;
             }
-            //rs.close();						�ر�file�����ݿ���Ҫ��fileope��֪��   ������
+            
+//         		while(rs.next()){						//	
+//               // sname = rs.getString("mname");
+//            										//
+//                data[i] = new Object[6];			//
+//                data[i][0] = sname;
+//                data[i][1] = id;
+//                data[i][2] = email;				//
+//                data[i][3] = acState;
+//                data[i][4] = usState;
+//                data[i][5] = dayDuration;
+//                //data[i][6] = scomp;
+//               // data[i][7] = sgrade;
+//                i++;
+//            }
+            //rs.close();						
             //con.close();
-        } catch(ClassNotFoundException e1) {   
-            //���ݿ��������쳣����
-            System.out.println("Sorry,can`t find the Driver!");   
-            e1.printStackTrace();   
-            } 
-            //catch(SQLException e1) {
-            //e1.printStackTrace();  				//catch �������ݿ�����⣬file��Ҫ��
-            //}
-	        catch (Exception e1) {
+        } catch (Exception e1) {
             e1.printStackTrace();
             }
         
@@ -94,36 +100,37 @@ public class UserCheck implements ActionListener{
         JScrollPane scrollPane = new JScrollPane();
         
         
-        TableColumn firsetColumn0 = table.getColumnModel().getColumn(2);			//�����п�����Ϊ��n+1������0��ʼ��
+        TableColumn firsetColumn0 = table.getColumnModel().getColumn(0);			//
         firsetColumn0.setPreferredWidth(150);										
-        TableColumn firsetColumn = table.getColumnModel().getColumn(3);				//�����п�
+        TableColumn firsetColumn = table.getColumnModel().getColumn(1);				//
         firsetColumn.setPreferredWidth(220);
-        TableColumn firsetColumn1 = table.getColumnModel().getColumn(5);			//�����п�
+        TableColumn firsetColumn1 = table.getColumnModel().getColumn(2);			//
         firsetColumn1.setPreferredWidth(220);
-        TableColumn firsetColumn2 = table.getColumnModel().getColumn(6);			//�����п�
+        TableColumn firsetColumn2 = table.getColumnModel().getColumn(3);			//
         firsetColumn2.setPreferredWidth(220);
-        table.setRowHeight(50);														//�����п�
+        TableColumn firsetColumn3 = table.getColumnModel().getColumn(4);			//
+        firsetColumn3.setPreferredWidth(220);
+        table.setRowHeight(50);														//
         
         
         JTableHeader head = table.getTableHeader();
         
         
-        head.setPreferredSize(new Dimension(head.getWidth(), 35));                 // ���ñ�ͷ��С
-        head.setFont(new Font("����", Font.PLAIN, 18));								// ���ñ�ͷ����
-        table.setFont(new Font("����", Font.PLAIN, 18));								// ���ñ���������
+        head.setPreferredSize(new Dimension(head.getWidth(), 35));                 // 
+        head.setFont(new Font("����", Font.PLAIN, 18));								// 
+        table.setFont(new Font("����", Font.PLAIN, 18));								// 
         
         
         scrollPane.getViewport().add(table);
         
-        
-		return1 = new JButton("����");
-		return1.setBounds(1000, 550,150, 40);										//button����
-		return1.setFont(new Font("����", Font.BOLD, 30));
-
+        //frame.getContentPane().add(return1);
 		
-		scrollPane.setBounds(50, 50,1100, 500);									//tableλ������
+		return1 = new JButton("return");
+		return1.setBounds(1000, 550,150, 40);										//
+		return1.setFont(new Font("����", Font.BOLD, 30));
+		scrollPane.setBounds(50, 50,1100, 500);									//
 		frame.add(return1);
-		
+		return1.addActionListener(this);
 		frame.add(scrollPane);
 		
 		
@@ -134,8 +141,10 @@ public class UserCheck implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		
-		
+		if (e.getSource() == return1) {
+			frame.dispose();
+			Systemi1 gui = new Systemi1 ();
+			gui.go();
+			}
 		}
 }
-
-	

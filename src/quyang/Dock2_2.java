@@ -42,39 +42,40 @@ public class Dock2_2  implements ActionListener {
 	 JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
 	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
-		
+		frame.setSize(800, 800);//set hight and width	
+		frame.setLocationRelativeTo(null);// set in middle
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		
 		frame.getContentPane().add(label1);
 		label1.setBounds(0,0,430,120);
-		label1.setBackground(Color.BLACK);
+	//	label1.setBackground(Color.BLACK);
 		label1.setOpaque(true);
 		label1.setFont(new java.awt.Font("serif", 1, 45));
-		label1.setForeground(Color.WHITE);
+	//	label1.setForeground(Color.WHITE);
 		
 		
 		frame.getContentPane().add(label2);
 		label2.setBounds(0,150,430,200);
-		label2.setBackground(Color.BLACK);
+	//	label2.setBackground(Color.BLACK);
 		label2.setOpaque(true);
 		label2.setFont(new java.awt.Font("serif", 1, 40));
-		label2.setForeground(Color.WHITE);
+	//	label2.setForeground(Color.WHITE);
 		
 		
 		frame.getContentPane().add(button1);
 		button1.setBounds(60,520,320,70);
-		button1.setBackground(Color.BLACK);
+	//	button1.setBackground(Color.BLACK);
 		Font bigFont = new Font("serif",Font.BOLD,30);
 		button1.setFont(bigFont);
-		button1.setForeground(Color.WHITE);
+	//	button1.setForeground(Color.WHITE);
 		button1.addActionListener(this);
 		
 		frame.getContentPane().add(button2);
 		button2.setBounds(60,630,320,70);
-		button2.setBackground(Color.BLACK);
+	//	button2.setBackground(Color.BLACK);
 		button2.setFont(bigFont);
-		button2.setForeground(Color.WHITE);
+	//	button2.setForeground(Color.WHITE);
 		button2.addActionListener(this);
 		
 		
@@ -82,24 +83,24 @@ public class Dock2_2  implements ActionListener {
 			frame.getContentPane().add(label3);
 			
 			label3.setBounds(0,780,70,70);
-			label3.setBackground(Color.BLACK);
+	//		label3.setBackground(Color.BLACK);
 			label3.setOpaque(true);
 			label3.setFont(new java.awt.Font("serif", 1, 25));
-			label3.setForeground(Color.WHITE);
+	//		label3.setForeground(Color.WHITE);
 			frame.getContentPane().add(label4);
 			
 			label4.setBounds(360,780,70,70);
-			label4.setBackground(Color.BLACK);
+	//		label4.setBackground(Color.BLACK);
 			label4.setOpaque(true);
 			label4.setFont(new java.awt.Font("serif", 1, 25));
-			label4.setForeground(Color.WHITE);
+	//		label4.setForeground(Color.WHITE);
 			
 			frame.getContentPane().add(label5);
 			label5.setBounds(0,400,450,70);
-			label5.setBackground(Color.BLACK);
+	//		label5.setBackground(Color.BLACK);
 			label5.setOpaque(true);
 			label5.setFont(new java.awt.Font("serif", 1, 25));
-			label5.setForeground(Color.WHITE);
+	//		label5.setForeground(Color.WHITE);
 			
 			mt.act();
 			//button1.addActionListener(t);

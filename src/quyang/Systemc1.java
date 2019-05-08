@@ -40,7 +40,8 @@ public class Systemc1 implements ActionListener  {
 	
  
 	public void go() {
-	
+		frame.setSize(800, 800);//set hight and width	
+		frame.setLocationRelativeTo(null);// set in middle
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 	
@@ -157,7 +158,7 @@ public class Systemc1 implements ActionListener  {
             	if((FileOpe.checkUniqueId(id))==false || FileOpe.checkUniqueEmail(mail)==false )
                 {
              	  // System.out.println("exist");
-                	JOptionPane.showMessageDialog(null, "User exists¨r(¨s¨Œ¨t)¨q", "Error",JOptionPane.ERROR_MESSAGE); 
+                	JOptionPane.showMessageDialog(null, "User existsï¿½r(ï¿½sï¿½ï¿½ï¿½t)ï¿½q", "Error",JOptionPane.ERROR_MESSAGE); 
                 }
              	   
                 else if((FileOpe.checkUniqueId(id))==true && FileOpe.checkUniqueEmail(mail)==true)
@@ -168,7 +169,7 @@ public class Systemc1 implements ActionListener  {
              	   aa.setName(name);
              
              	   FileOpe.addUser(aa);
-             	  JOptionPane.showMessageDialog(null, "Sign up succeeded(*^¨Œ^*)", "Successful",JOptionPane.PLAIN_MESSAGE);
+             	  JOptionPane.showMessageDialog(null, "Sign up succeeded(*^ï¿½ï¿½^*)", "Successful",JOptionPane.PLAIN_MESSAGE);
                 }
             }
             

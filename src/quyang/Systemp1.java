@@ -32,61 +32,62 @@ public class Systemp1 implements ActionListener {
 	
  
 	public void go() {
-	
+		frame.setSize(800, 800);//set hight and width	
+		frame.setLocationRelativeTo(null);// set in middle
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 	
 		frame.getContentPane().add(label1);
 		label1.setBounds(0,0,430,120);
-		label1.setBackground(Color.BLACK);
+		//label1.setBackground(Color.BLACK);
 		label1.setOpaque(true);
 		label1.setFont(new java.awt.Font("serif", 1, 45));
-		label1.setForeground(Color.WHITE);
+		//label1.setForeground(Color.WHITE);
 	
 		frame.getContentPane().add(label2);
 		label2.setBounds(0,150,430,120);
-		label2.setBackground(Color.BLACK);
+		//label2.setBackground(Color.BLACK);
 		label2.setOpaque(true);
 		label2.setFont(new java.awt.Font("serif", 1, 35));
-		label2.setForeground(Color.WHITE);
+		//label2.setForeground(Color.WHITE);
 		
 		frame.getContentPane().add(label3);
 		label3.setBounds(0,300,100,200);
-		label3.setBackground(Color.BLACK);
+		//label3.setBackground(Color.BLACK);
 		label3.setOpaque(true);
 		label3.setFont(new java.awt.Font("serif", 1, 40));
-		label3.setForeground(Color.WHITE);
+		//label3.setForeground(Color.WHITE);
 		
 		frame.getContentPane().add(tf1);
 		tf1.setHorizontalAlignment(JTextField.LEADING);
 		tf1.setBounds(100,300,430,200);
-		tf1.setBackground(Color.BLACK);
+		//tf1.setBackground(Color.BLACK);
 		tf1.setFont(new java.awt.Font("serif", 1, 40));
-		tf1.setForeground(Color.WHITE);
+		//tf1.setForeground(Color.WHITE);
 		
 	
 		
 		frame.getContentPane().add(button1);
 		button1.setBounds(60,540,320,70);
-		button1.setBackground(Color.BLACK);
+		//button1.setBackground(Color.BLACK);
 		Font bigFont = new Font("serif",Font.BOLD,30);
 		button1.setFont(bigFont);
-		button1.setForeground(Color.WHITE);
+		//button1.setForeground(Color.WHITE);
 		button1.addActionListener(this);
 		
 	
 		frame.getContentPane().add(button2);
 		button2.setBounds(60,650,320,70);
-		button2.setBackground(Color.BLACK);
+		//button2.setBackground(Color.BLACK);
 		Font bigFont2 = new Font("serif",Font.BOLD,30);
 		button2.setFont(bigFont2);
-		button2.setForeground(Color.WHITE);
+		//button2.setForeground(Color.WHITE);
 		button2.addActionListener(this);
 
 	
 		frame.getContentPane().add(label6);
 		label6.setBounds(0,780,430,70);
-		label6.setBackground(Color.BLACK);
+		//label6.setBackground(Color.BLACK);
 		label6.setOpaque(true);
 		
 		frame.setSize(450,900);

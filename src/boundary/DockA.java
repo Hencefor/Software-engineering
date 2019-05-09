@@ -1,4 +1,4 @@
-package quyang;
+package boundary;
 
 import java.awt.Color;
 import java.awt.Font;

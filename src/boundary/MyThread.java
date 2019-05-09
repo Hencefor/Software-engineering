@@ -1,4 +1,4 @@
-package quyang;
+package boundary;
 
 import javax.swing.*;
 

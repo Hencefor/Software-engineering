@@ -1,4 +1,4 @@
-package quyang;
+package boundary;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -29,12 +29,15 @@ public class GUI_beginning extends JFrame implements ActionListener {
 //	 ResetDay a = new ResetDay();
 //	 a.start();
 	GUI_beginning gui = new GUI_beginning();
+	ResetDay test = new ResetDay(); 
+    test.start();
 	//gui.go();
 	
  }
  
  public GUI_beginning()
  {
+	 
 	 this.setSize(800, 800);//set hight and width	
 	 this.setLocationRelativeTo(null);// set in middle
 	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

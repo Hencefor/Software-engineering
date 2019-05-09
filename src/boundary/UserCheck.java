@@ -1,4 +1,4 @@
-package quyang;
+package boundary;
 
 import java.awt.Container;
 import java.awt.Dimension;

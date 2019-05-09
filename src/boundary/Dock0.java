@@ -105,7 +105,7 @@ public void actionPerformed(ActionEvent e) {
 		frame.dispose();
 		Dock da;
 		da = FileOpeDock.fetchOneDock("B");
-		DockA gui = new DockA(da);
+		DockB gui = new DockB(da);
 		gui.go();
 		gui.label1.setText("           DOCK    B");
 		}
@@ -113,7 +113,7 @@ public void actionPerformed(ActionEvent e) {
 		frame.dispose();
 		Dock da;
 		da = FileOpeDock.fetchOneDock("C");
-		DockA gui = new DockA(da);
+		DockC gui = new DockC(da);
 		gui.go();
 		gui.label1.setText("           DOCK    C");
 		}

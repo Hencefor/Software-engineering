@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="boundary.System0" x="1766" y="-1">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.Systemp1"/>
+        <Communication destinationClassName="boundary.Systemc1"/>
+        <Communication destinationClassName="boundary.GUI_beginning"/>
+        <Communication destinationClassName="boundary.Systemi1"/>
+    </Class>
+    <Class name="boundary.Systemp1" x="1888" y="248">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.System0"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="operation3.AccountValidatorUtil"/>
+        <Communication destinationClassName="boundary.Systemp2_1_100"/>
+    </Class>
+    <Class name="control.FileOpe" x="1672" y="1196">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="entity.User"/>
+    </Class>
+    <Class name="boundary.Systemp2_1_100" x="2034" y="958">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="entity.User" endpointName="a" kind="Simple"/>
+        <Communication destinationClassName="boundary.System0"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="entity.User"/>
+    </Class>
+    <Class name="entity.Dock" x="704" y="826">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="boundary.Dock2_1" x="906" y="1414">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="boundary.MyThread"
+            endpointName="mt" kind="Simple"/>
+        <Association destinationClassName="entity.Dock"
+            endpointName="da" kind="Simple"/>
+        <Association destinationClassName="entity.User"
+            endpointName="us" kind="Simple"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="entity.Dock"/>
+        <Communication destinationClassName="entity.User"/>
+        <Communication destinationClassName="boundary.Dock1"/>
+        <Communication destinationClassName="boundary.Dock0"/>
+        <Communication destinationClassName="boundary.MyThread"/>
+        <Communication destinationClassName="control.FileOpeDock"/>
+    </Class>
+    <Class name="JunitTest1.dateTestTest" x="128" y="688">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="boundary.UserCheck" x="2212" y="509">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="entity.User"/>
+        <Communication destinationClassName="boundary.Systemi1"/>
+    </Class>
+    <Class name="boundary.Dock2_2" x="1626" y="1395">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="boundary.MyThread"
+            endpointName="mt" kind="Simple"/>
+        <Association destinationClassName="entity.Dock"
+            endpointName="da" kind="Simple"/>
+        <Association destinationClassName="entity.User"
+            endpointName="us" kind="Simple"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="entity.Dock"/>
+        <Communication destinationClassName="entity.User"/>
+        <Communication destinationClassName="boundary.Dock1"/>
+        <Communication destinationClassName="boundary.Dock0"/>
+        <Communication destinationClassName="boundary.MyThread"/>
+        <Communication destinationClassName="control.FileOpeDock"/>
+    </Class>
+    <Class name="boundary.GUI_beginning" x="478" y="47">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.System0"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="boundary.Dock0"/>
+    </Class>
+    <Class name="boundary.Dock1" x="1182" y="388">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="entity.Dock"
+            endpointName="da" kind="Simple"/>
+        <Association destinationClassName="entity.User"
+            endpointName="us" kind="Simple"/>
+        <Communication destinationClassName="entity.Dock"/>
+        <Communication destinationClassName="entity.User"/>
+        <Communication destinationClassName="boundary.Dock2_1"/>
+        <Communication destinationClassName="boundary.Dock2_2"/>
+        <Communication destinationClassName="boundary.Dock0"/>
+    </Class>
+    <Class name="boundary.Dock0" x="845" y="240">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.GUI_beginning"/>
+        <Communication destinationClassName="boundary.DockA"/>
+        <Communication destinationClassName="control.FileOpeDock"/>
+    </Class>
+    <Class name="boundary.Systemi1" x="2212" y="248">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.System0"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="boundary.Systemi2_1"/>
+        <Communication destinationClassName="boundary.UserCheck"/>
+    </Class>
+    <Class name="control.FileOpeDock" x="574" y="1110">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="operation3.AccountValidatorUtil" x="1614" y="1252">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="entity.User" x="1764" y="778">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="boundary.Systemi2_1" x="352" y="695">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="entity.Dock" endpointName="A" kind="Simple"/>
+        <Association destinationClassName="entity.Dock" endpointName="B" kind="Simple"/>
+        <Association destinationClassName="entity.Dock" endpointName="C" kind="Simple"/>
+        <Communication destinationClassName="boundary.Systemi1"/>
+        <Communication destinationClassName="control.FileOpeDock"/>
+    </Class>
+    <Class name="boundary.Systemc1" x="1575" y="250">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="boundary.System0"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="operation3.AccountValidatorUtil"/>
+        <Communication destinationClassName="entity.User"/>
+    </Class>
+    <Class name="boundary.DockB" x="1532" y="754">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="boundary.DockA"/>
+    </Class>
+    <Class name="boundary.DockA" x="1183" y="700">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="entity.Dock"
+            endpointName="da" kind="Simple"/>
+        <Association destinationClassName="entity.User"
+            endpointName="us" kind="Simple"/>
+        <Communication destinationClassName="control.FileOpe"/>
+        <Communication destinationClassName="boundary.Dock1"/>
+        <Communication destinationClassName="boundary.Dock0"/>
+    </Class>
+    <Class name="boundary.DockC" x="1550" y="830">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="boundary.DockA"/>
+    </Class>
+    <Class name="boundary.MyThread" x="1308" y="973">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="entity.User"
+            endpointName="use" kind="Simple"/>
+        <Association destinationClassName="entity.Dock"
+            endpointName="da" kind="Simple"/>
+        <Communication destinationClassName="boundary.Dock1"/>
+    </Class>
+</ClassDiagram>

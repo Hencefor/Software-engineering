@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import control.FileOpeDock;
+import entity.Dock;
 import operation3.*;
 
 public class Dock0 implements ActionListener{

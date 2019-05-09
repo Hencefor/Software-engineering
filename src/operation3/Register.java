@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import control.FileOpe;
+import entity.User;
+
 public class Register extends JFrame implements ActionListener {
     /**********************定义各控件********************************/
     private JLabel lbAccount=new JLabel("Please enter your ID number:");

@@ -12,9 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import control.FileOpe;
+import entity.User;
 import operation3.AccountValidatorUtil;
-import operation3.FileOpe;
-import operation3.User;
 
 public class Systemp1 implements ActionListener {
 	

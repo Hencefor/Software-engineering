@@ -10,8 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import operation3.FileOpe;
-import operation3.User;
+import control.FileOpe;
+import entity.User;
 
 public class Systemp2_1_100 implements ActionListener {
 	User a;

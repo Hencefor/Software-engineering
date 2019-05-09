@@ -1,4 +1,4 @@
-package operation3;
+package control;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import entity.Dock;
 
 public class FileOpeDock  {
 	public static ArrayList<Dock> fetchAllDocks() {/*读取所有用户信息，但不打印，可用于遍历(check)*/

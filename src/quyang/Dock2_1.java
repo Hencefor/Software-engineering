@@ -12,10 +12,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import operation3.Dock;
-import operation3.FileOpe;
-import operation3.FileOpeDock;
-import operation3.User;
+import control.FileOpe;
+import control.FileOpeDock;
+import entity.Dock;
+import entity.User;
 
 public class Dock2_1  implements ActionListener {
 	Dock da;

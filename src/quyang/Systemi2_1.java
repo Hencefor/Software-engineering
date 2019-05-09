@@ -12,6 +12,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import control.FileOpeDock;
+import entity.Dock;
+
 public class Systemi2_1 implements ActionListener  {
 	String id="";
 	Dock A;

@@ -14,8 +14,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 
-import operation3.FileOpe;
-import operation3.User;
+import control.FileOpe;
+import entity.User;
 
 public class UserCheck implements ActionListener{
 	JFrame frame = new JFrame();

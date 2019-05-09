@@ -12,7 +12,7 @@ class dateTestTest {
     String email2 = "cao@163.com";
     String email3 = "caoshencheng";
 
-
+    String name="123";
 
     @Test
     public void isEmailLegal2() throws Exception {
@@ -26,6 +26,9 @@ class dateTestTest {
     public void isEmailLegal3() throws Exception {
         assertTrue(AccountValidatorUtil.isEmail(email3));
     }
-
+    @Test
+    public void isname() throws Exception {
+        assertTrue(AccountValidatorUtil.isUsername(name));
+    }
 
 }

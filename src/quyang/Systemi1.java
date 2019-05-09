@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import control.FileOpe;
+
 public class Systemi1 implements ActionListener {
  
  

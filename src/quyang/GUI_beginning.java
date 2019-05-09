@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import operation3.FileOpe;
+import control.FileOpe;
 import operation3.ResetDay;
 
 public class GUI_beginning extends JFrame implements ActionListener {

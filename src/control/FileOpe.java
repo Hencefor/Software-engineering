@@ -1,4 +1,4 @@
-package operation3;
+package control;
 
 /**
 
@@ -6,6 +6,8 @@ package operation3;
  */
 import java.io.*;
 import java.util.ArrayList;
+
+import entity.User;
 
 
 public class FileOpe {/**/

@@ -2,6 +2,9 @@ package operation3;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import control.FileOpe;
+import entity.User;
 public class ResetDay {   
     private final Timer timer = new Timer();
     private final static long DELAY_TIME=100 * 1000;//

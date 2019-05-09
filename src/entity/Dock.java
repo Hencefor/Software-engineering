@@ -1,11 +1,11 @@
-package operation3;
+package entity;
 import java.io.Serializable;
 public class Dock implements Serializable{
 	
 	//boolean[] latch= {true,true,true,true,true,false,false,false};
 	boolean[] latch= {true,true,true,true,true,false,false,false};
 	int i;
-	String dockId;
+	public String dockId;
 	
 	public int releaseScooter()/*turn one latch to false if there is a latch has scooter(in order),return the position of latch */
 	{

@@ -2,6 +2,10 @@ package quyang;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
+
+import entity.Dock;
+import entity.User;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

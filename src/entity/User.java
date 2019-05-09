@@ -1,4 +1,4 @@
-package operation3;
+package entity;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class User implements Serializable{
 	private String Id;
 	private String email;
 	private boolean acState=false;/*account state*/
-	 int counter=0;
+	 public int counter=0;
 	private boolean usState=false;/*Using state*/
 	private long pickTime=0;/*pick time*/
 	private long dayDuration=0;/*time used in one day*/

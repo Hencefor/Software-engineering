@@ -1,6 +1,9 @@
 package quyang;
 
 import javax.swing.*;
+
+import entity.Dock;
+import entity.User;
 import operation3.*;
 
 import java.awt.event.*;

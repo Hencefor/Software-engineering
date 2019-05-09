@@ -122,12 +122,18 @@ public class Dock1 implements ActionListener  {
 				}
 			}
 			else if(user_usS==false && user_acS==false && dock_em==true){
-				//����
+				//
 				JOptionPane.showMessageDialog(null,"There is no scooter in this dock!");
 			}
-			else if(user_usS==true || user_acS==true ) {
-				//����
-				JOptionPane.showMessageDialog(null,"You need to return the scooter for pay the bill first!");
+			
+			
+			else if(user_usS==true  ) {
+				//
+				JOptionPane.showMessageDialog(null,"You can not pick a new scooter while you are using one.  ");
+			}
+			else if(user_acS==true)
+			{
+				JOptionPane.showMessageDialog(null,"You account has been suspended, please pay the fine to continually use the scooter  ");
 			}
 		
 		}

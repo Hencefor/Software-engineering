@@ -57,6 +57,7 @@ public class MyThread extends Thread implements Runnable {
 		}
 		
 		if(time==0) {
+			JOptionPane.showMessageDialog(null, "Time's up, the latch is locked, if you need to pick or return scooter, please choose again", "ERROR",JOptionPane.ERROR_MESSAGE);
 			frame.dispose();
 			Dock1 gui = new Dock1(da,use);
 			String a = lx.getText();

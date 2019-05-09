@@ -158,7 +158,7 @@ public class Systemc1 implements ActionListener  {
             	if((FileOpe.checkUniqueId(id))==false || FileOpe.checkUniqueEmail(mail)==false )
                 {
              	  // System.out.println("exist");
-                	JOptionPane.showMessageDialog(null, "User exists�r(�s���t)�q", "Error",JOptionPane.ERROR_MESSAGE); 
+                	JOptionPane.showMessageDialog(null, "User exists", "Error",JOptionPane.ERROR_MESSAGE); 
                 }
              	   
                 else if((FileOpe.checkUniqueId(id))==true && FileOpe.checkUniqueEmail(mail)==true)
@@ -169,7 +169,7 @@ public class Systemc1 implements ActionListener  {
              	   aa.setName(name);
              
              	   FileOpe.addUser(aa);
-             	  JOptionPane.showMessageDialog(null, "Sign up succeeded(*^��^*)", "Successful",JOptionPane.PLAIN_MESSAGE);
+             	  JOptionPane.showMessageDialog(null, "Sign up succeeded", "Successful",JOptionPane.PLAIN_MESSAGE);
                 }
             }
             

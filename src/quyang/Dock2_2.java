@@ -29,6 +29,7 @@ public class Dock2_2  implements ActionListener {
 		Date date = new Date(r);
 		SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
 		useTime = sd.format(date);
+		
 	}
 				
 
@@ -42,9 +43,10 @@ public class Dock2_2  implements ActionListener {
 	 		+ "<br>......</html>",JLabel.CENTER);
 	 JLabel label3 = new JLabel("",JLabel.CENTER);
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
-	 
-	 MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
+	 MyThread  mt;
+	// MyThread  mt= new MyThread(label1,label4,label3,frame,da,us);
 	 public void go() {
+		// MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 		JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
@@ -83,7 +85,7 @@ public class Dock2_2  implements ActionListener {
 		button2.addActionListener(this);
 		
 		
-		label3.setText(da.returnPositionPick()+"");
+		label3.setText(da.returnPositionReturn()+"");
 			frame.getContentPane().add(label3);
 			
 			label3.setBounds(0,780,70,70);
@@ -105,7 +107,7 @@ public class Dock2_2  implements ActionListener {
 			label5.setOpaque(true);
 			label5.setFont(new java.awt.Font("serif", 1, 25));
 	//		label5.setForeground(Color.WHITE);
-			
+			  mt = new MyThread(label1,label4,label3,frame,da,us);
 			mt.act();
 			//button1.addActionListener(t);
 			
@@ -142,7 +144,7 @@ public class Dock2_2  implements ActionListener {
 			
 			us.notUsingSc();
 			
-			if(r<=1800)
+			if(r>60*1000)
 				us.setAcState(false);
 			us.addDuration(r);
 			da.retrieveScooter();

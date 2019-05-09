@@ -37,8 +37,8 @@ public class Dock3 implements ActionListener {
 	label2.setBounds(0,190,430,240);
 //	label2.setBackground(Color.BLACK);
 	label2.setOpaque(true);
-	label2.setFont(new java.awt.Font("serif", 1, 40));//设置字体样式
-//	label2.setForeground(Color.WHITE);//设置字体颜色
+	label2.setFont(new java.awt.Font("serif", 1, 40));//
+//	label2.setForeground(Color.WHITE);//
 	
 	frame.getContentPane().add(button1);
 	button1.setBounds(60,570,320,70);

@@ -22,12 +22,13 @@ public class UserCheck implements ActionListener{
 	
 	
 	JButton return1= new JButton("Return");
-
+	JButton send1= new JButton("Send");
+	JTextField tf = new JTextField(9);
 	
 	public void go() { 
 		
 		
-		frame.setLocationRelativeTo(null);
+		frame.setLocation(0, 0);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		frame.setSize(1500, 1500);
@@ -40,10 +41,10 @@ public class UserCheck implements ActionListener{
         
         int i=0,j;
         
-        //GUI验时可先删去try-catch
+        //
         
         try {
-           //调用File
+           
         	
                            
             String sname = null;
@@ -124,7 +125,22 @@ public class UserCheck implements ActionListener{
         scrollPane.getViewport().add(table);
         
         //frame.getContentPane().add(return1);
+        frame.getContentPane().add(tf);
+		tf.setHorizontalAlignment(JTextField.LEADING);
+		tf.setBounds(47, 550,150, 40);
+//		tf.setBackground(Color.BLACK);
+		tf.setFont(new java.awt.Font("serif", 1, 40));//
+//		tf.setForeground(Color.WHITE);//
 		
+		frame.getContentPane().add(send1);
+		send1.setBounds(200, 550,150, 40);
+		send1.setFont(new Font("黑体", Font.BOLD, 30));
+	//	button2.setBackground(Color.BLACK);
+	//	send1.setFont(bigFont);
+	//	button2.setForeground(Color.WHITE);
+		send1.addActionListener(this);
+        
+        
 		return1 = new JButton("return");
 		return1.setBounds(1000, 550,150, 40);										//
 		return1.setFont(new Font("黑体", Font.BOLD, 30));
@@ -140,11 +156,24 @@ public class UserCheck implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		
+		User a = FileOpe.fetchOneUser(tf.getText());
 		if (e.getSource() == return1) {
 			frame.dispose();
 			Systemi1 gui = new Systemi1 ();
 			gui.go();
 			}
+		
+		else if(e.getSource() == send1)
+		{
+			if(FileOpe.fetchOneUser(tf.getText())!=null)
+			{
+				
+				JOptionPane.showMessageDialog(null, "Send user information to "+a.getName()+"Content:\n acState:"+
+				a.getAcState()+"   usState:"+a.getUsState(), "Successful",JOptionPane.PLAIN_MESSAGE);
+			}
+
+		}
+		
+		
 		}
 }

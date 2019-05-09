@@ -57,8 +57,8 @@ public class DockA implements ActionListener {
 		tf.setHorizontalAlignment(JTextField.LEADING);
 		tf.setBounds(150,190,430,240);
 //		tf.setBackground(Color.BLACK);
-		tf.setFont(new java.awt.Font("serif", 1, 40));//设置字体样式
-//		tf.setForeground(Color.WHITE);//设置字体颜色
+		tf.setFont(new java.awt.Font("serif", 1, 40));//
+//		tf.setForeground(Color.WHITE);//
 	
 		frame.getContentPane().add(button1);
 		button1.setBounds(60,500,320,70);

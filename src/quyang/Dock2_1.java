@@ -23,6 +23,7 @@ public class Dock2_1  implements ActionListener {
 	public Dock2_1(Dock x, User y) {
 		da = x;
 		us = y;
+		
 	}
 	
    
@@ -37,8 +38,9 @@ public class Dock2_1  implements ActionListener {
 	// Jlabel label5
 	 MyThread  mt;
 	 public void go() {
-		MyThread  m = new MyThread(label1,label4,label3,frame,da,us);
-		mt=m;
+		 label3= new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
+			  mt = new MyThread(label1,label4,label3,frame,da,us);
+			
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,7 +77,7 @@ public class Dock2_1  implements ActionListener {
 		//button2.setForeground(Color.WHITE);
 		button2.addActionListener(this); 
 			
-			label3= new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
+			
 			frame.getContentPane().add(label3);
 			
 			label3.setBounds(0,780,70,70);

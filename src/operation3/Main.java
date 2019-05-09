@@ -5,6 +5,19 @@ import java.util.Date;
 public class Main {
 	public static void main(String[] args)
 	{
+		
+		long c,r;
+		Date use;
+		Date time= new Date();
+		c = time.getTime();
+		r = FileOpe.fetchOneUser("000000001").timeuse(c);
+		System.out.println(r);
+		
+		
+		
+		
+		
+		
 //		User a=FileOpe.fetchOneUser("161188232");
 //		a.setAcState(true);
 //		FileOpe.updateUser(a);

@@ -27,8 +27,10 @@ public class Dock2_2  implements ActionListener {
 		c = time.getTime();
 		r = us.timeuse(c);
 		Date date = new Date(r);
-		SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
+		System.out.println(r);
+		SimpleDateFormat sd = new SimpleDateFormat("mm:ss");
 		useTime = sd.format(date);
+		
 		
 	}
 				
@@ -142,13 +144,15 @@ public class Dock2_2  implements ActionListener {
 			Dock0 gui = new Dock0();
 			String a = label1.getText();
 			
+			us.setAcState(false);
 			us.notUsingSc();
 			
-			if(r>60*1000)
-				us.setAcState(false);
+			if(r>60000) {
+				us.setAcState(true);
+			}
 			us.addDuration(r);
 			da.retrieveScooter();
-
+			
 			FileOpe.updateUser(us);
 			FileOpeDock.updateDock(da);
 			

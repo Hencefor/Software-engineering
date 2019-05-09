@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -19,18 +20,27 @@ public class Dock2_2  implements ActionListener {
 	User us;
 	long c,r;
 	String useTime;
-	public Dock2_2(Dock x, User y) {
+	public Dock2_2(Dock x, User y)  {
 		da = x;
 		us = y;
 		Date use;
 		Date time= new Date();
 		c = time.getTime();
 		r = us.timeuse(c);
-		Date date = new Date(r);
-		System.out.println(r);
-		SimpleDateFormat sd = new SimpleDateFormat("mm:ss");
-		useTime = sd.format(date);
+		try {
 		
+		SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
+		long diff = r-8*60*60*1000;
+	
+		
+	
+		Date date = new Date(diff);
+	
+		
+		useTime = sd.format(date);
+		}catch (Exception e){
+			
+		}
 		
 	}
 				

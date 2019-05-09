@@ -171,6 +171,9 @@ public class UserCheck implements ActionListener{
 				JOptionPane.showMessageDialog(null, "Send user information to "+a.getName()+"Content:\n acState:"+
 				a.getAcState()+"   usState:"+a.getUsState(), "Successful",JOptionPane.PLAIN_MESSAGE);
 			}
+			else
+				JOptionPane.showMessageDialog(null, "User not found ","ERROR",JOptionPane.ERROR_MESSAGE);
+		tf.setText("");
 
 		}
 		

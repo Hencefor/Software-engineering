@@ -14,7 +14,14 @@ import javax.swing.JTextField;
 
 import control.FileOpe;
 import entity.User;
-
+/**   
+* @Title Register
+* @Package:  operation3
+* @Description: This class defines the method to validate the input format. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+*/
 public class Register extends JFrame implements ActionListener {
     /**********************定义各控件********************************/
     private JLabel lbAccount=new JLabel("Please enter your ID number:");

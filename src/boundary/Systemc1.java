@@ -16,8 +16,22 @@ import control.FileOpe;
 import entity.User;
 import operation3.AccountValidatorUtil;
 
+/**   
+* @Title:Systemc1
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "Create" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpe
+* @see: entity.User
+* @see: operation3.AccountValidatorUtil
+*/
 public class Systemc1 implements ActionListener  {
 	
+	/**
+	 * This is the constructor of the class.
+	 */
 	public Systemc1()
 	{
 		
@@ -39,6 +53,9 @@ public class Systemc1 implements ActionListener  {
 	JLabel label6 = new JLabel();
 	
  
+	/** This is the first method, defines the create user and add user's information GUI.
+	 *@return void
+	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
@@ -130,6 +147,10 @@ public class Systemc1 implements ActionListener  {
 	}
 
 
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

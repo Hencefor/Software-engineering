@@ -13,6 +13,15 @@ import control.FileOpeDock;
 import entity.Dock;
 import operation3.*;
 
+/**   
+* @Title:Dock0
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler for clicking "Dock" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: FileOpe, entity,operation3
+*/
 public class Dock0 implements ActionListener{
  
  
@@ -27,7 +36,9 @@ public class Dock0 implements ActionListener{
  JLabel label3 = new JLabel();
  
 
- 
+ 	/** This is the first method, defines the Dock initial GUI.
+	 *@return void
+	 */
  public void go() {
 	frame.setSize(800, 800);//set hight and width	
 	frame.setLocationRelativeTo(null);// set in middle
@@ -84,6 +95,10 @@ public class Dock0 implements ActionListener{
 	
  	}
 
+ 	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub//

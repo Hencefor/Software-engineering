@@ -19,6 +19,15 @@ import javax.swing.JOptionPane;
 
 import operation3.*;
 
+/**   
+* @Title:DockA
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler for selecting to click the "Dock A" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: FileOpe, entity,operation3
+*/
 public class DockA implements ActionListener {
 	String id="";
 	JFrame frame = new JFrame();
@@ -32,11 +41,17 @@ public class DockA implements ActionListener {
 	Dock da;
 	User us;
 	
-	
+	/**
+	 * This is the constructor of the class.
+	 * @param: <Dock> x
+	 */
 	public DockA(Dock x) {
 		da = x;
 	}
  
+	/** This is the first method, defines the identity authentication GUI.
+	 *@return void
+	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
@@ -92,6 +107,10 @@ public class DockA implements ActionListener {
 	
 	}
 
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

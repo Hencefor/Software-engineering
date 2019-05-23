@@ -19,11 +19,31 @@ import entity.Dock;
 import entity.User;
 import operation3.*;
 
+/**   
+ * @Title:Dock2_2
+ * @Package: boundary 
+ * @Description: This class defines the GUI of event handler for clicking "return" button. 
+ * @author Group 88
+ * @date 2019.05.18
+ * @version V1.0   
+ * @see: entity.Dock
+ * @see: entity.User
+ * @see: control.FileOpe
+ * @see: control.FileOpeDock
+ * @see: MyThread
+ * @see£º operation3
+ */
 public class Dock2_2  implements ActionListener {
 	Dock da;
 	User us;
 	long c,r;
 	String useTime;
+	
+	/**
+	 * This is the constructor of the class.
+	 * @param: <Dock> x
+	 * @param: <User> y
+	 */
 	public Dock2_2(Dock x, User y)  {
 		da = x;
 		us = y;
@@ -61,6 +81,10 @@ public class Dock2_2  implements ActionListener {
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	 MyThread  mt;
 	// MyThread  mt= new MyThread(label1,label4,label3,frame,da,us);
+	 
+	 /** This is the first method, defines the return a scooter GUI.
+	  *@return void
+	  */
 	 public void go() {
 		// MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
 		JLabel label5 = new JLabel("Use Time: "+useTime,JLabel.CENTER);
@@ -132,6 +156,10 @@ public class Dock2_2  implements ActionListener {
 			
 		 }
 
+	 /** This is the second method, aimed to respond to button actions.
+	  *@return void
+	  *@param e
+	  */ 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

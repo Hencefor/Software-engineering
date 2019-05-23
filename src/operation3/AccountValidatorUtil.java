@@ -1,5 +1,13 @@
 package operation3;
 import java.util.regex.Pattern;
+/**   
+* @Title:AccountValidatorUtil
+* @Package:  operation3
+* @Description: This class defines the method to validate the input format. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+*/
 public class AccountValidatorUtil {
     /**
      * 
@@ -41,81 +49,76 @@ public class AccountValidatorUtil {
      */
     public static final String REGEX_IP_ADDR = "(25[0-5]|2[0-4]\\d|[0-1]\\d{2}|[1-9]?\\d)";
  
-    /**
-     * 
-     * 
-     * @param username
-     * @return 
-     */
+    /** This method is used to check if the name format is right.
+     * @param: username
+	 *@return boolean
+	 */
     public static boolean isUsername(String username) {
         return Pattern.matches(REGEX_USERNAME, username);
     }
  
     /**
-     * 校验密码
-     * 
+     * This method is used to check if the password is right.
      * @param password
-     * @return 
+     * @return boolean
      */
     public static boolean isPassword(String password) {
         return Pattern.matches(REGEX_PASSWORD, password);
     }
  
     /**
-     * 校验手机号
-     * 
+     * This method is used to check if the phone number format is right.
      * @param mobile
-     * @return 
+     * @return boolean
      */
     public static boolean isMobile(String mobile) {
         return Pattern.matches(REGEX_MOBILE, mobile);
     }
  
     /**
-     * 校验邮箱
-     * 
+     *This method is used to check if the name format is right.
      * @param email
-     * @return 
+     * @return boolean
      */
     public static boolean isEmail(String email) {
         return Pattern.matches(REGEX_EMAIL, email);
     }
  
     /**
-     * 校验汉字
+     * This method is used to check if the String is Chinese.
      * 
      * @param chinese
-     * @return 
+     * @return boolean
      */
     public static boolean isChinese(String chinese) {
         return Pattern.matches(REGEX_CHINESE, chinese);
     }
  
     /**
-     * 校验身份证
+     * This method is used to check if the id Card is right.
      * 
      * @param idCard
-     * @return
+     * @return boolean
      */
     public static boolean isIDCard(String idCard) {
         return Pattern.matches(REGEX_ID_CARD, idCard);
     }
  
     /**
-     * 校验URL
+     * This method is used to check if the URL is right.
      * 
      * @param url
-     * @return 校验通过返回true，否则返回false
+     * @return boolean
      */
     public static boolean isUrl(String url) {
         return Pattern.matches(REGEX_URL, url);
     }
  
     /**
-     * 校验IP地址
+     * This method is used to check if the IP address is right.
      * 
      * @param ipAddr
-     * @return
+     * @return boolean
      */
     public static boolean isIPAddr(String ipAddr) {
         return Pattern.matches(REGEX_IP_ADDR, ipAddr);

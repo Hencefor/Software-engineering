@@ -12,38 +12,55 @@ import javax.swing.JLabel;
 import control.FileOpe;
 import operation3.ResetDay;
 
+/**   
+* @Title:GUI_beginning
+* @Package: boundary 
+* @Description: This class is used to show the beginning GUI of the system. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: FileOpe, ResetDay
+*/
+
 public class GUI_beginning extends JFrame implements ActionListener {
+	/**
+	 * @ClassName: GUI_beginning 
+	 * @Description: Create the first GUI.
+	 */
  
+	//JFrame frame = new JFrame();
+	JButton button1 = new JButton("System");
+	JButton button2 = new JButton("Dock");
+	JButton button3 = new JButton("Exit");
+	JLabel label1 = new JLabel("           Group    88");
+	JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
+	JLabel label3 = new JLabel();
  
- //JFrame frame = new JFrame();
- JButton button1 = new JButton("System");
- JButton button2 = new JButton("Dock");
- JButton button3 = new JButton("Exit");
- JLabel label1 = new JLabel("           Group    88");
- JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
- JLabel label3 = new JLabel();
- 
- public static void main (String[] args) {
-	 FileOpe.viewUser();
-	 
-//	 ResetDay a = new ResetDay();
-//	 a.start();
-	GUI_beginning gui = new GUI_beginning();
-	ResetDay test = new ResetDay(); 
-    test.start();
-	//gui.go();
+	/** This is the main method, which is the entrance of the process
+	 *@param args 
+	 */
+	public static void main (String[] args) {
+		FileOpe.viewUser();
+		//	 ResetDay a = new ResetDay();
+		//	 a.start();
+		GUI_beginning gui = new GUI_beginning();
+		ResetDay test = new ResetDay(); 
+		test.start();
+		//gui.go();
 	
- }
- 
- public GUI_beginning()
- {
+	}
+	/**
+	 * This is the constructor of the class.
+	 */
+	public GUI_beginning()
+	{
 	 
-	 this.setSize(800, 800);//set hight and width	
-	 this.setLocationRelativeTo(null);// set in middle
-	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 this.setLayout(null);
+		this.setSize(800, 800);//set hight and width	
+		this.setLocationRelativeTo(null);// set in middle
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(null);
 		
-	 this.getContentPane().add(label1);
+		this.getContentPane().add(label1);
 		label1.setBounds(0,0,430,120);
 //		label1.setBackground(Color.BLACK);
 		label1.setOpaque(true);
@@ -88,16 +105,22 @@ public class GUI_beginning extends JFrame implements ActionListener {
 		
 		this.setSize(450,900);
 		this.setVisible(true);
- }
+	}
  
- 
- public void go() {
+	/** This is the first method, aimed to create the beginning GUI.
+	 *@return void
+	 */
+	public void go() {
 	
 	
- }
-
-@Override
-public void actionPerformed(ActionEvent e) {
+	}
+	
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 		if (e.getSource() == button1) {
 			this.dispose();
@@ -115,6 +138,4 @@ public void actionPerformed(ActionEvent e) {
 			}
 	
 	}
-
-
 }

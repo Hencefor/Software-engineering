@@ -9,9 +9,20 @@ import java.util.ArrayList;
 
 import entity.User;
 
-
+/**   
+* @Title:FileOpe
+* @Package: control
+* @Description: This class defines operations of UserInfor document. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: entity.User
+*/
 public class FileOpe {/**/
 	
+	/** This is the first method, create the initial users in the document.
+	 *@return void
+	 */
 	public static void temptest()/**/
 	{
 		//
@@ -71,7 +82,9 @@ public class FileOpe {/**/
 		}
 	}
 	
-	
+	/** This is the second method, used to view all users in the document.
+	 *@return void
+	 */
 	public static void viewUser() /*view all user information*/
 	{
 		ArrayList<User> a= new ArrayList<User>();
@@ -107,6 +120,10 @@ public class FileOpe {/**/
 		
 	}
 	
+	/** This is the third method, used to add a user in the document.
+	 *@param:<User> a
+	 *@return: void
+	 */
 	public static void addUser(User a) /*add a user to file*/
 	{
 		ArrayList<User> temp=fetchAllUsers();
@@ -130,6 +147,9 @@ public class FileOpe {/**/
 		}
 	}
 	
+	/** This is the forth method, used to fetch all users in the document.
+	 *@return: ArrayList<User>
+	 */
 	public static ArrayList<User> fetchAllUsers() {/*obtain all users object in file*/
 		ArrayList<User> a= new ArrayList<User>();
 		try {
@@ -164,6 +184,10 @@ public class FileOpe {/**/
 		return null;
 	}
 	
+	/** This is the fifth method, used to fetch a specific user in the document.
+	 * @param: Id
+	 *@return: User
+	 */
 	public static User fetchOneUser(String Id)/*use id to find a user, return that user*/
 	{
 		int tracker=0;
@@ -185,6 +209,10 @@ public class FileOpe {/**/
 		
 	}
 	
+	/** This is the sixth method, used to write a specific user in the document.
+	 * @param: {ArrayList<User>} a
+	 *@return: void
+	 */
 	public static void writeFile(ArrayList<User> a)/*receive an arraylist, write it into file*/
 	{
 		try {
@@ -206,6 +234,10 @@ public class FileOpe {/**/
 		}
 	}
 	
+	/** This is the seventh method, used to delete a specific user in the document.
+	 * @param: <User> del
+	 *@return: void
+	 */
 	public static void deleteUser(User del)/*use id to find a user, delete that user*/
 	{
 		int i=0;
@@ -258,7 +290,10 @@ public class FileOpe {/**/
 		
 	}
 	
-	
+	/** This is the eighth method, used to check if a specific user is in the document.
+	 * @param: Id
+	 *@return: boolean
+	 */
 	public static boolean checkUniqueId(String Id)/*judge the uniqueness of user id*/
 	{
 		ArrayList<User> temp=fetchAllUsers();
@@ -274,6 +309,10 @@ public class FileOpe {/**/
 		return true;
 	}
 	
+	/** This is the ninth method, used to check if a specific email is in the document.
+	 * @param: emial
+	 *@return: boolean
+	 */
 	public static boolean checkUniqueEmail(String email)/*judge the uniqueness of user email*/
 	{
 		ArrayList<User> temp=fetchAllUsers();
@@ -288,7 +327,10 @@ public class FileOpe {/**/
 		return true;
 	}
 	
-	
+	/** This is the tenth method, used to update a specific user in the document.
+	 * @param: <User> a
+	 *@return: void
+	 */
 	public static void updateUser(User a)/*update a user's information in file*/
 	{
 		

@@ -15,6 +15,17 @@ import javax.swing.JTextField;
 import control.FileOpeDock;
 import entity.Dock;
 
+/**   
+* @Title:Systemi2_1
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "Dock" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpeDock
+* @see: entity.Dock
+* @see: operation3
+*/
 public class Systemi2_1 implements ActionListener  {
 	String id="";
 	Dock A;
@@ -29,6 +40,9 @@ public class Systemi2_1 implements ActionListener  {
 	JLabel label6 = new JLabel();
 	
  
+	/** This is the first method, defines the check dock information GUI.
+	 *@return void
+	 */
 	public void go() {
 		A=FileOpeDock.fetchOneDock("A");
 		B=FileOpeDock.fetchOneDock("B");
@@ -85,6 +99,10 @@ public class Systemi2_1 implements ActionListener  {
 	}
 
 
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

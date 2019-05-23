@@ -15,7 +15,20 @@ import java.util.TimerTask;
 
 import entity.Dock;
 
+/**   
+* @Title:FileOpeDock
+* @Package: control
+* @Description: This class defines operations of Docks document. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: entity.Dock
+*/
 public class FileOpeDock  {
+	
+	/** This is the first method, used to fetch all docks in the document.
+	 *@return: ArrayList<Dock>
+	 */
 	public static ArrayList<Dock> fetchAllDocks() {/*读取所有用户信息，但不打印，可用于遍历(check)*/
 
 		ArrayList<Dock> a= new ArrayList<Dock>();
@@ -51,6 +64,10 @@ public class FileOpeDock  {
 		return null;
 	}
 	
+	/** This is the second method, used to fetch one dock in the document.
+	 * @param: Id
+	 *@return: Dock
+	 */
 	public static Dock fetchOneDock(String Id)/*use id to find a dock, return that dock(check)*/
 	{
 		int tracker=0;
@@ -72,6 +89,10 @@ public class FileOpeDock  {
 		
 	}
 	
+	/** This is the third method, used to delete a specific dock in the document.
+	 * @param: <Dock> del
+	 *@return: void
+	 */
 	public static void deleteDock(Dock del)/*use id to find a user, delete that user(check)*/
 	{
 		int i=0;
@@ -124,6 +145,10 @@ public class FileOpeDock  {
 		
 	}
 
+	/** This is the forth method, used to write a specific dock in the document.
+	 * @param: {ArrayList<Dock>} a
+	 *@return: void
+	 */
 	public static void writeFileDock(ArrayList<Dock> a)/*receive an arraylist, write it into file(check)*/
 	{
 		try {
@@ -148,6 +173,11 @@ public class FileOpeDock  {
 			e.printStackTrace();
 		}
 	}
+	
+	/** This is the fifth method, used to update a specific dock in the document.
+	 * @param: <Dock> a
+	 *@return: void
+	 */
 	public static void updateDock(Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
 	{
 //		Dock d=fetchOneDock(dname);

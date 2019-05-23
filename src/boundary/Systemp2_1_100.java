@@ -13,12 +13,30 @@ import javax.swing.JOptionPane;
 import control.FileOpe;
 import entity.User;
 
+/**   
+* @Title:Systemp2_1_100
+* @Package: boundary 
+* @Description: This class defines the GUI after the identity authentication. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpe
+* @see: entity.User
+*/
 public class Systemp2_1_100 implements ActionListener {
 	User a;
+	/**
+	 * This is the constructor of the class.
+	 */
 	public Systemp2_1_100()
 	{
 		
 	}
+	
+	/**
+	 * This is the constructor of the class.
+	 * @param: <User> a
+	 */
 	 public Systemp2_1_100(User a)
 	 {
 		 this.a=a;
@@ -35,7 +53,9 @@ public class Systemp2_1_100 implements ActionListener {
  JLabel label4 = new JLabel();
  
  
- 
+ 	/** This is the first method, defines the user paying GUI.
+	 *@return void
+	 */
  public void go() {
 	int amount = -1;
 	if(a.getAcState()==true) {
@@ -100,6 +120,10 @@ public class Systemp2_1_100 implements ActionListener {
 	
  }
 
+ 	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub

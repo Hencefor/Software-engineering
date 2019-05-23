@@ -9,7 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-
+/**   
+* @Title:System0
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "System" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+*/
 public class System0 implements ActionListener {
 	
 	public static Object out;
@@ -21,6 +28,10 @@ public class System0 implements ActionListener {
 	JLabel label1 = new JLabel("SYSTEM",JLabel.CENTER);
 	JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
 	
+	
+	/** This is the first method, defines the system initial GUI.
+	 *@return void
+	 */
 	public void go() {
 		//frame.getContentPane().setBackground(Color.BLACK);
 		frame.setSize(800, 800);//set hight and width	
@@ -81,6 +92,10 @@ public class System0 implements ActionListener {
 
 	}
 
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

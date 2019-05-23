@@ -2,13 +2,24 @@ package operation3;/**
  * 
  */
 
-import java.util.Timer;         
+import java.util.Timer;  
+
+/**   
+* @Title:TimerTaskTest
+* @Package:  operation3
+* @Description: This class used to define the period that the system should be updated. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.1   
+*/
 public class TimerTaskTest extends java.util.TimerTask{   
 	int i=60;
 	
 	
 	
-	
+	/** This method is used to count down the time of the period.
+	 *@return void
+	 */
     @Override   
     public void run() {   
        // TODO Auto-generated method stub  

@@ -11,6 +11,16 @@ import javax.swing.JLabel;
 
 import control.FileOpe;
 
+/**   
+* @Title:Systemi1
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "Information" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpe
+* @see: operation3
+*/
 public class Systemi1 implements ActionListener {
  
  
@@ -23,6 +33,9 @@ public class Systemi1 implements ActionListener {
  JLabel label3 = new JLabel();
  
  
+ 	/** This is the first method, defines the information checking options GUI.
+ 	 *@return void
+	 */
  public void go() {
 	frame.setSize(800, 800);//set hight and width	
 	frame.setLocationRelativeTo(null);// set in middle
@@ -77,7 +90,10 @@ public class Systemi1 implements ActionListener {
 	
  }
 
-
+ 	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub

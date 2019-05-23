@@ -17,9 +17,28 @@ import control.FileOpeDock;
 import entity.Dock;
 import entity.User;
 
+/**   
+ * @Title:Dock2_1
+ * @Package: boundary 
+ * @Description: This class defines the GUI of event handler for clicking "pick" button. 
+ * @author Group 88
+ * @date 2019.05.18
+ * @version V1.0   
+ * @see: entity.Dock
+ * @see: entity.User
+ * @see: control.FileOpe
+ * @see: control.FileOpeDock
+ * @see: MyThread
+ */
 public class Dock2_1  implements ActionListener {
 	Dock da;
 	User us;
+	
+	/**
+	 * This is the constructor of the class.
+	 * @param: <Dock> x
+	 * @param: <User> y
+	 */
 	public Dock2_1(Dock x, User y) {
 		da = x;
 		us = y;
@@ -37,6 +56,10 @@ public class Dock2_1  implements ActionListener {
 	 JLabel label4 = new JLabel("59",JLabel.CENTER);
 	// Jlabel label5
 	 MyThread  mt;
+	 
+	 /** This is the first method, defines the pick scooter GUI.
+	  *@return void
+	  */	 
 	 public void go() {
 		 label3= new JLabel(da.returnPositionPick()+"",JLabel.CENTER);
 			  mt = new MyThread(label1,label4,label3,frame,da,us);
@@ -103,6 +126,10 @@ public class Dock2_1  implements ActionListener {
 			
 		 }
 
+	 /** This is the second method, aimed to respond to button actions.
+	  *@return void
+	  *@param e
+	  */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

@@ -17,6 +17,17 @@ import javax.swing.table.TableColumn;
 import control.FileOpe;
 import entity.User;
 
+
+/**   
+* @Title: UserCheck
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "User" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpe
+* @see: entity.User
+*/
 public class UserCheck implements ActionListener{
 	JFrame frame = new JFrame();
 	
@@ -25,6 +36,9 @@ public class UserCheck implements ActionListener{
 	JButton send1= new JButton("Send");
 	JTextField tf = new JTextField(9);
 	
+	/** This is the first method, defines the check user's information GUI.
+	 *@return void
+	 */
 	public void go() { 
 		
 		
@@ -155,6 +169,10 @@ public class UserCheck implements ActionListener{
 		
 	}
 	
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		User a = FileOpe.fetchOneUser(tf.getText());
 		if (e.getSource() == return1) {

@@ -17,9 +17,25 @@ import javax.swing.JOptionPane;
 
 import operation3.*;
 
+/**   
+* @Title:Dock1
+* @Package: boundary 
+* @Description: This class defines the GUI after authenticating the user's identity. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: entity.Dock
+* @see: entity.User
+* @see: operation3
+*/
 public class Dock1 implements ActionListener  {
 	Dock da;
 	User us;
+	/**
+	 * This is the constructor of the class.
+	 * @param: <Dock> x
+	 * @param: <User> y
+	 */
 	public Dock1(Dock x, User y) {
 		da = x;
 		us = y;
@@ -39,6 +55,9 @@ public class Dock1 implements ActionListener  {
 		//gui.go();
 	//}
 	
+	/** This is the first method, defines the user operation selection GUI.
+	 *@return void
+	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
@@ -96,7 +115,10 @@ public class Dock1 implements ActionListener  {
 		
 	}
 
-
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		boolean user_usS,user_acS;

@@ -16,6 +16,17 @@ import control.FileOpe;
 import entity.User;
 import operation3.AccountValidatorUtil;
 
+/**   
+* @Title:Systemp1
+* @Package: boundary 
+* @Description: This class defines the GUI of event handler of clicking "Pay" button. 
+* @author Group 88
+* @date 2019.05.18
+* @version V1.0   
+* @see: control.FileOpe
+* @see: entity.User
+* @see: operation3.AccountValidatorUtil
+*/
 public class Systemp1 implements ActionListener {
 	
 	String id="";
@@ -30,7 +41,9 @@ public class Systemp1 implements ActionListener {
 	
 	JLabel label6 = new JLabel();
 	
- 
+	/** This is the first method, defines the pay initial GUI of identity authentication.
+	 *@return void
+	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
 		frame.setLocationRelativeTo(null);// set in middle
@@ -95,6 +108,10 @@ public class Systemp1 implements ActionListener {
 	
 	}
 
+	/** This is the second method, aimed to respond to button actions.
+	 *@return void
+	 *@param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		

@@ -28,7 +28,7 @@ import entity.Dock;
 public class FileOpeDock  {
 	
 	/** This is the first method, used to fetch all docks in the document.
-	 *@return: ArrayList<Dock>
+	 *@return 
 	 */
 	public static ArrayList<Dock> fetchAllDocks() {/*读取所有用户信息，但不打印，可用于遍历(check)*/
 
@@ -66,7 +66,7 @@ public class FileOpeDock  {
 	}
 	
 	/** This is the second method, used to fetch one dock in the document.
-	 * @param: Id
+	 *@param Id
 	 *@return: Dock
 	 */
 	public static Dock fetchOneDock(String Id)/*use id to find a dock, return that dock(check)*/
@@ -91,7 +91,7 @@ public class FileOpeDock  {
 	}
 	
 	/** This is the third method, used to delete a specific dock in the document.
-	 * @param: Dock del
+	 * @param del
 	 */
 	public static void deleteDock(Dock del)/*use id to find a user, delete that user(check)*/
 	{
@@ -146,7 +146,7 @@ public class FileOpeDock  {
 	}
 
 	/** This is the forth method, used to write a specific dock in the document.
-	 * @param: ArrayList<Dock> a
+	 *@param a
 	 */
 	public static void writeFileDock(ArrayList<Dock> a)/*receive an arraylist, write it into file(check)*/
 	{
@@ -174,7 +174,7 @@ public class FileOpeDock  {
 	}
 	
 	/** This is the fifth method, used to update a specific dock in the document.
-	 * @param: Dock a
+	 *@param a
 	 */
 	public static void updateDock(Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
 	{

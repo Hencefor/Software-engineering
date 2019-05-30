@@ -116,7 +116,6 @@ public class GUI_beginning extends JFrame implements ActionListener {
 	}
 	
 	/** This is the second method, aimed to respond to button actions.
-	 *@return void
 	 *@param e
 	 */
 	@Override

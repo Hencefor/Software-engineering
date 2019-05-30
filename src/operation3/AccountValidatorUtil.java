@@ -52,7 +52,7 @@ public class AccountValidatorUtil {
     public static final String REGEX_IP_ADDR = "(25[0-5]|2[0-4]\\d|[0-1]\\d{2}|[1-9]?\\d)";
  
     /** This method is used to check if the name format is right.
-     * @param: username
+     *@param username
 	 *@return boolean
 	 */
     public static boolean isUsername(String username) {

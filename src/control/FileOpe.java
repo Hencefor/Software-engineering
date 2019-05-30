@@ -151,7 +151,7 @@ public class FileOpe {/**/
 	
 	/**
 	 * This is the forth method, used to fetch all users in the document.
-	 * @return ArrayList<User>
+	 * @return 
 	 */
 	public static ArrayList<User> fetchAllUsers() {/*obtain all users object in file*/
 		ArrayList<User> a= new ArrayList<User>();
@@ -214,7 +214,7 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the sixth method, used to write a specific user in the document.
-	 * @param: ArrayList<User> a
+	 *@param 
 	 */
 	public static void writeFile(ArrayList<User> a)/*receive an arraylist, write it into file*/
 	{
@@ -238,7 +238,7 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the seventh method, used to delete a specific user in the document.
-	 * @param: User del
+	 *@param 
 	 */
 	public static void deleteUser(User del)/*use id to find a user, delete that user*/
 	{
@@ -293,8 +293,8 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the eighth method, used to check if a specific user is in the document.
-	 * @param: Id
-	 *@return: boolean
+	 *@param Id
+	 *@return boolean
 	 */
 	public static boolean checkUniqueId(String Id)/*judge the uniqueness of user id*/
 	{
@@ -312,8 +312,8 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the ninth method, used to check if a specific email is in the document.
-	 * @param: emial
-	 *@return: boolean
+	 *@param String email
+	 *@return boolean
 	 */
 	public static boolean checkUniqueEmail(String email)/*judge the uniqueness of user email*/
 	{
@@ -329,8 +329,9 @@ public class FileOpe {/**/
 		return true;
 	}
 	
-	/** This is the tenth method, used to update a specific user in the document.
-	 * @param: User a
+	/**
+	 *This is the tenth method, used to update a specific user in the document.
+	 *@param 
 	 */
 	public static void updateUser(User a)/*update a user's information in file*/
 	{

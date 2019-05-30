@@ -29,8 +29,8 @@ public class System0 implements ActionListener {
 	JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
 	
 	
-	/** This is the first method, defines the system initial GUI.
-	 *@return void
+	/**
+	 * This is the first method, defines the system initial GUI.
 	 */
 	public void go() {
 		//frame.getContentPane().setBackground(Color.BLACK);
@@ -92,9 +92,8 @@ public class System0 implements ActionListener {
 
 	}
 
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

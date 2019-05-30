@@ -90,8 +90,7 @@ public class FileOpeDock  {
 	}
 	
 	/** This is the third method, used to delete a specific dock in the document.
-	 * @param: <Dock> del
-	 *@return: void
+	 * @param: Dock del
 	 */
 	public static void deleteDock(Dock del)/*use id to find a user, delete that user(check)*/
 	{
@@ -146,8 +145,7 @@ public class FileOpeDock  {
 	}
 
 	/** This is the forth method, used to write a specific dock in the document.
-	 * @param: {ArrayList<Dock>} a
-	 *@return: void
+	 * @param: ArrayList<Dock> a
 	 */
 	public static void writeFileDock(ArrayList<Dock> a)/*receive an arraylist, write it into file(check)*/
 	{
@@ -175,8 +173,7 @@ public class FileOpeDock  {
 	}
 	
 	/** This is the fifth method, used to update a specific dock in the document.
-	 * @param: <Dock> a
-	 *@return: void
+	 * @param: Dock a
 	 */
 	public static void updateDock(Dock a)/*update a dock's information,you can change the latch information but must not change the name(check)*/
 	{

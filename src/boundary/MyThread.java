@@ -30,12 +30,12 @@ public class MyThread extends Thread implements Runnable {
 	Thread threads;
 	/**
 	 * This is the constructor of the class.
-	 * @param: <JLabel> ll
-	 * @param: <JLabel> l
-	 * @param: <JLabel> l1
-	 * @param: <Jframe> f
-	 * @param: <Dock> x
-	 * @param: <User> y
+	 * @param ll
+	 * @param l
+	 * @param l1
+	 * @param f
+	 * @param x
+	 * @param y
 	 */
 	public MyThread(JLabel ll,JLabel l,JLabel l1,JFrame f,Dock x, User y) {
 		lx=ll;
@@ -46,16 +46,16 @@ public class MyThread extends Thread implements Runnable {
 		use = y;
 	}
 	
-	/** This is the first method, defines the beginning of the thread.
-	 *@return void
+	/**
+	 * This is the first method, defines the beginning of the thread.
 	 */
 	public void act() {
 		threads=new MyThread(lx,label,l2,frame,da,use);
 		threads.start();
 	}
 	
-	/** This is the second method, defines running of the thread.
-	 *@return void
+	/**
+	 * This is the second method, defines running of the thread.
 	 */
 	public void run() {
 		
@@ -107,8 +107,8 @@ public class MyThread extends Thread implements Runnable {
 		}
 	}
 	
-	/** This is the third method, defines the thread can be canceled when needed.
-	 *@return void
+	/**
+	 * This is the third method, defines the thread can be canceled when needed.
 	 */
 	public void cancel(){
         try {

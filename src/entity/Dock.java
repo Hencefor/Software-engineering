@@ -74,8 +74,9 @@ public class Dock implements Serializable{
 		return position;
 	}
 		
-	/** This is the third method, used to check the first empty latch position.
-	 *@return int
+	/**
+	 * This is the third method, used to check the first empty latch position.
+	 * @return int
 	 */
 		public int returnPositionReturn()
 		{
@@ -129,8 +130,8 @@ public class Dock implements Serializable{
 		return position;
 	}
 	
-	/** This is the fifth method, used to scan all the latches in the dock.
-	 *@return void
+	/**
+	 * This is the fifth method, used to scan all the latches in the dock.
 	 */
 	public void scan()
 	{

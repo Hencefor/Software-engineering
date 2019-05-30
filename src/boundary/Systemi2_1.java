@@ -40,8 +40,8 @@ public class Systemi2_1 implements ActionListener  {
 	JLabel label6 = new JLabel();
 	
  
-	/** This is the first method, defines the check dock information GUI.
-	 *@return void
+	/**
+	 * This is the first method, defines the check dock information GUI.
 	 */
 	public void go() {
 		A=FileOpeDock.fetchOneDock("A");
@@ -99,9 +99,8 @@ public class Systemi2_1 implements ActionListener  {
 	}
 
 
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

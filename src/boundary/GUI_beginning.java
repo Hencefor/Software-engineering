@@ -23,11 +23,6 @@ import operation3.ResetDay;
 */
 
 public class GUI_beginning extends JFrame implements ActionListener {
-	/**
-	 * @ClassName: GUI_beginning 
-	 * @Description: Create the first GUI.
-	 */
- 
 	//JFrame frame = new JFrame();
 	JButton button1 = new JButton("System");
 	JButton button2 = new JButton("Dock");
@@ -36,8 +31,9 @@ public class GUI_beginning extends JFrame implements ActionListener {
 	JLabel label2 = new JLabel(" WELCOME ! ",JLabel.CENTER);
 	JLabel label3 = new JLabel();
  
-	/** This is the main method, which is the entrance of the process
-	 *@param args 
+	/**
+	 * This is the main method, which is the entrance of the process
+	 * @param args
 	 */
 	public static void main (String[] args) {
 		FileOpe.viewUser();
@@ -107,8 +103,8 @@ public class GUI_beginning extends JFrame implements ActionListener {
 		this.setVisible(true);
 	}
  
-	/** This is the first method, aimed to create the beginning GUI.
-	 *@return void
+	/**
+	 * This is the first method, aimed to create the beginning GUI.
 	 */
 	public void go() {
 	

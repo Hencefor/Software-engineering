@@ -33,9 +33,9 @@ public class Systemi1 implements ActionListener {
  JLabel label3 = new JLabel();
  
  
- 	/** This is the first method, defines the information checking options GUI.
- 	 *@return void
-	 */
+ 	/**
+ 	 * This is the first method, defines the information checking options GUI.
+ 	 */
  public void go() {
 	frame.setSize(800, 800);//set hight and width	
 	frame.setLocationRelativeTo(null);// set in middle
@@ -90,10 +90,9 @@ public class Systemi1 implements ActionListener {
 	
  }
 
- 	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
-	 */
+ 	/**
+ 	 * This is the second method, aimed to respond to button actions.
+ 	 */
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub

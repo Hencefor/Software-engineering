@@ -33,8 +33,8 @@ public class Dock1 implements ActionListener  {
 	User us;
 	/**
 	 * This is the constructor of the class.
-	 * @param: <Dock> x
-	 * @param: <User> y
+	 * @param x
+	 * @param y
 	 */
 	public Dock1(Dock x, User y) {
 		da = x;
@@ -55,8 +55,8 @@ public class Dock1 implements ActionListener  {
 		//gui.go();
 	//}
 	
-	/** This is the first method, defines the user operation selection GUI.
-	 *@return void
+	/**
+	 * This is the first method, defines the user operation selection GUI.
 	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
@@ -115,10 +115,10 @@ public class Dock1 implements ActionListener  {
 		
 	}
 
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
+	
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		boolean user_usS,user_acS;

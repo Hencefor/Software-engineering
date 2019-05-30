@@ -35,7 +35,7 @@ public class Systemp2_1_100 implements ActionListener {
 	
 	/**
 	 * This is the constructor of the class.
-	 * @param: <User> a
+	 * @param a
 	 */
 	 public Systemp2_1_100(User a)
 	 {
@@ -53,9 +53,9 @@ public class Systemp2_1_100 implements ActionListener {
  JLabel label4 = new JLabel();
  
  
- 	/** This is the first method, defines the user paying GUI.
-	 *@return void
-	 */
+ 	/**
+ 	 * This is the first method, defines the user paying GUI.
+ 	 */
  public void go() {
 	int amount = -1;
 	if(a.getAcState()==true) {
@@ -120,10 +120,9 @@ public class Systemp2_1_100 implements ActionListener {
 	
  }
 
- 	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
-	 */
+ 	/**
+ 	 * This is the second method, aimed to respond to button actions.
+ 	 */
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub

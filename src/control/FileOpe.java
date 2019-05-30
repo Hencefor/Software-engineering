@@ -20,8 +20,8 @@ import entity.User;
 */
 public class FileOpe {/**/
 	
-	/** This is the first method, create the initial users in the document.
-	 *@return void
+	/**
+	 * This is the first method, create the initial users in the document.
 	 */
 	public static void temptest()/**/
 	{
@@ -82,8 +82,8 @@ public class FileOpe {/**/
 		}
 	}
 	
-	/** This is the second method, used to view all users in the document.
-	 *@return void
+	/**
+	 * This is the second method, used to view all users in the document.
 	 */
 	public static void viewUser() /*view all user information*/
 	{
@@ -120,9 +120,9 @@ public class FileOpe {/**/
 		
 	}
 	
-	/** This is the third method, used to add a user in the document.
-	 *@param:<User> a
-	 *@return: void
+	/**
+	 * This is the third method, used to add a user in the document.
+	 * @param a
 	 */
 	public static void addUser(User a) /*add a user to file*/
 	{
@@ -147,8 +147,9 @@ public class FileOpe {/**/
 		}
 	}
 	
-	/** This is the forth method, used to fetch all users in the document.
-	 *@return: ArrayList<User>
+	/**
+	 * This is the forth method, used to fetch all users in the document.
+	 * @return ArrayList<User>
 	 */
 	public static ArrayList<User> fetchAllUsers() {/*obtain all users object in file*/
 		ArrayList<User> a= new ArrayList<User>();
@@ -184,9 +185,10 @@ public class FileOpe {/**/
 		return null;
 	}
 	
-	/** This is the fifth method, used to fetch a specific user in the document.
-	 * @param: Id
-	 *@return: User
+	/**
+	 * This is the fifth method, used to fetch a specific user in the document.
+	 * @param Id
+	 * @return User
 	 */
 	public static User fetchOneUser(String Id)/*use id to find a user, return that user*/
 	{
@@ -210,8 +212,7 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the sixth method, used to write a specific user in the document.
-	 * @param: {ArrayList<User>} a
-	 *@return: void
+	 * @param: ArrayList<User> a
 	 */
 	public static void writeFile(ArrayList<User> a)/*receive an arraylist, write it into file*/
 	{
@@ -235,8 +236,7 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the seventh method, used to delete a specific user in the document.
-	 * @param: <User> del
-	 *@return: void
+	 * @param: User del
 	 */
 	public static void deleteUser(User del)/*use id to find a user, delete that user*/
 	{
@@ -328,8 +328,7 @@ public class FileOpe {/**/
 	}
 	
 	/** This is the tenth method, used to update a specific user in the document.
-	 * @param: <User> a
-	 *@return: void
+	 * @param: User a
 	 */
 	public static void updateUser(User a)/*update a user's information in file*/
 	{

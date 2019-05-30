@@ -43,14 +43,14 @@ public class DockA implements ActionListener {
 	
 	/**
 	 * This is the constructor of the class.
-	 * @param: <Dock> x
+	 * @param x
 	 */
 	public DockA(Dock x) {
 		da = x;
 	}
  
-	/** This is the first method, defines the identity authentication GUI.
-	 *@return void
+	/**
+	 * This is the first method, defines the identity authentication GUI.
 	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
@@ -107,9 +107,8 @@ public class DockA implements ActionListener {
 	
 	}
 
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

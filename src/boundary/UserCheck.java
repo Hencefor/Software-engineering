@@ -36,8 +36,8 @@ public class UserCheck implements ActionListener{
 	JButton send1= new JButton("Send");
 	JTextField tf = new JTextField(9);
 	
-	/** This is the first method, defines the check user's information GUI.
-	 *@return void
+	/**
+	 *  This is the first method, defines the check user's information GUI.
 	 */
 	public void go() { 
 		
@@ -169,9 +169,8 @@ public class UserCheck implements ActionListener{
 		
 	}
 	
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
 	public void actionPerformed(ActionEvent e) {
 		User a = FileOpe.fetchOneUser(tf.getText());

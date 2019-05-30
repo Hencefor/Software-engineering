@@ -22,9 +22,9 @@ class JunitTest1{
 
     String name="123";
 
-    /** This method is used to check if the email format is right.
-	 *@return void
-	 *@throw: Exception
+    /** 
+     * This method is used to check if the email format is right.
+	 *@throws: Exception
 	 */
     @Test
     public void isEmailLegal2() throws Exception {
@@ -38,11 +38,12 @@ class JunitTest1{
     public void isEmailLegal3() throws Exception {
         assertTrue(AccountValidatorUtil.isEmail(email3));
     }
-    /** This method is used to check if the name format is right.
-	 *@return void
-	 *@throw: Exception
+    /** 
+     * This method is used to check if the name format is right.
+	 *@throws: Exception
 	 */
     @Test
+
     public void isname() throws Exception {
         assertTrue(AccountValidatorUtil.isUsername(name));
     }

@@ -17,8 +17,8 @@ public class TimerTaskTest extends java.util.TimerTask{
 	
 	
 	
-	/** This method is used to count down the time of the period.
-	 *@return void
+	/**
+	 * This method is used to count down the time of the period.
 	 */
     @Override   
     public void run() {   

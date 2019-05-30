@@ -20,15 +20,17 @@ public class ResetDay {
     private final Timer timer = new Timer();
     private final static long DELAY_TIME=30 * 1000;//
     private final static long PERIO_TIME=30 * 1000;//execute each 60s
-    /** This method is used to start the operation of update.
-	 *@return void
+    /** 
+     * This method is used to start the operation of update.
 	 */
     public void start() { 
        timer.schedule(new SendMsgTask(), DELAY_TIME,PERIO_TIME);
     } 
-    /** This is the main method, which used to reset the date of system.
-	 *@param: args
-	 */
+    /**
+     * This is the main method, which used to reset the date of system.
+     * @param args
+     * @throws InterruptedException
+     */
    public static void main(String[] args) throws InterruptedException { 
        ResetDay test = new ResetDay(); 
        test.start();
@@ -45,15 +47,15 @@ public class ResetDay {
 */
 class SendMsgTask extends TimerTask{
     private static int i=0;
-    /** This method is used to start the operation of send messages.
-	 *@return void
-	 */
+    /**
+     * This method is used to start the operation of send messages.
+     */
     public void run() { 
         sendMsg();
     } 
-    /** This method is used to send messages.
-	 *@return void
-	 */
+    /**
+     * This method is used to send messages.
+     */
     private void sendMsg() {
     	ArrayList<User> a= new ArrayList<User>();
     	a=FileOpe.fetchAllUsers();

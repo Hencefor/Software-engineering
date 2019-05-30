@@ -41,8 +41,8 @@ public class Dock2_2  implements ActionListener {
 	
 	/**
 	 * This is the constructor of the class.
-	 * @param: <Dock> x
-	 * @param: <User> y
+	 * @param x
+	 * @param y
 	 */
 	public Dock2_2(Dock x, User y)  {
 		da = x;
@@ -82,8 +82,8 @@ public class Dock2_2  implements ActionListener {
 	 MyThread  mt;
 	// MyThread  mt= new MyThread(label1,label4,label3,frame,da,us);
 	 
-	 /** This is the first method, defines the return a scooter GUI.
-	  *@return void
+	 /** 
+	  * This is the first method, defines the return a scooter GUI.
 	  */
 	 public void go() {
 		// MyThread  mt = new MyThread(label1,label4,label3,frame,da,us);
@@ -156,10 +156,9 @@ public class Dock2_2  implements ActionListener {
 			
 		 }
 
-	 /** This is the second method, aimed to respond to button actions.
-	  *@return void
-	  *@param e
-	  */ 
+	 /**
+	  * This is the second method, aimed to respond to button actions.
+	  */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

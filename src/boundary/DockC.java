@@ -15,7 +15,7 @@ public class DockC extends DockA {
 	
 	/**
 	 * This is the constructor of the class.
-	 * @param: <Dock> x
+	 * @param x
 	 */
 	public DockC(Dock x) {
 		super(x);

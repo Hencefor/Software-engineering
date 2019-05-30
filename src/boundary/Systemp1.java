@@ -41,8 +41,8 @@ public class Systemp1 implements ActionListener {
 	
 	JLabel label6 = new JLabel();
 	
-	/** This is the first method, defines the pay initial GUI of identity authentication.
-	 *@return void
+	/**
+	 * This is the first method, defines the pay initial GUI of identity authentication.
 	 */
 	public void go() {
 		frame.setSize(800, 800);//set hight and width	
@@ -108,9 +108,8 @@ public class Systemp1 implements ActionListener {
 	
 	}
 
-	/** This is the second method, aimed to respond to button actions.
-	 *@return void
-	 *@param e
+	/**
+	 * This is the second method, aimed to respond to button actions.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

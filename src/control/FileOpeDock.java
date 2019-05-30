@@ -1,5 +1,10 @@
 package control;
-
+/**   
+* @Title:FileOpeDock
+* @Package: control
+* @date 2019.05.18 
+* @see: entity.Dock
+*/
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,13 +21,9 @@ import java.util.TimerTask;
 import entity.Dock;
 
 /**   
-* @Title:FileOpeDock
-* @Package: control
-* @Description: This class defines operations of Docks document. 
+* This class defines operations of Docks document. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: entity.Dock
 */
 public class FileOpeDock  {
 	

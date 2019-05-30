@@ -1,14 +1,16 @@
 package entity;
-import java.io.Serializable;
-
 /**   
 * @Title:Dock
-* @Package: entity
-* @Description: This class defines operations of Docks with the information in the Docks document. 
-* @author Group 88
-* @date 2019.05.18
-* @version V1.0   
+* @package: entity
+* @Time 2019.05.18
 */
+
+import java.io.Serializable;
+/**
+ * This class defines operations of Docks with the information in the Docks document.
+ *@author Group 88
+* @version V1.0 
+ */
 public class Dock implements Serializable{
 	
 	//boolean[] latch= {true,true,true,true,true,false,false,false};

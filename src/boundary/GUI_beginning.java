@@ -1,4 +1,12 @@
 package boundary;
+/**   
+* @Title:GUI_beginning
+* @Package: boundary 
+* @date 2019.05.18
+* @see: FileOpe, ResetDay
+*/
+
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,13 +21,9 @@ import control.FileOpe;
 import operation3.ResetDay;
 
 /**   
-* @Title:GUI_beginning
-* @Package: boundary 
-* @Description: This class is used to show the beginning GUI of the system. 
+* This class is used to show the beginning GUI of the system. 
 * @author Group 88
-* @date 2019.05.18
-* @version V1.0   
-* @see: FileOpe, ResetDay
+* @version V1.0 
 */
 
 public class GUI_beginning extends JFrame implements ActionListener {

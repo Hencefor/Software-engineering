@@ -1,4 +1,11 @@
 package boundary;
+/**   
+* @Title:Dock0
+* @Package: boundary 
+* @date 2019.05.18
+* @see: FileOpe, entity,operation3
+*/
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -12,15 +19,10 @@ import javax.swing.JLabel;
 import control.FileOpeDock;
 import entity.Dock;
 import operation3.*;
-
 /**   
-* @Title:Dock0
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler for clicking "Dock" button. 
+* This class defines the GUI of event handler for clicking "Dock" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: FileOpe, entity,operation3
 */
 
 public class Dock0 implements ActionListener{

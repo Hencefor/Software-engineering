@@ -1,11 +1,13 @@
 package operation3;
-import java.util.regex.Pattern;
 /**   
 * @Title:AccountValidatorUtil
 * @Package:  operation3
-* @Description: This class defines the method to validate the input format. 
-* @author Group 88
 * @date 2019.05.18
+*/
+import java.util.regex.Pattern;
+/**   
+ * This class defines the method to validate the input format. 
+* @author Group 88
 * @version V1.0   
 */
 public class AccountValidatorUtil {

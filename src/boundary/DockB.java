@@ -1,15 +1,18 @@
 package boundary;
+/**   
+* @Title:DockB
+* @Package: boundary 
+* @date 2019.05.18
+* @see: entity.Dock
+*/
+
 
 import entity.Dock;
 
 /**   
-* @Title:DockB
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler for selecting to click the "Dock B" button. 
+* This class defines the GUI of event handler for selecting to click the "Dock B" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: entity.Dock
 */
 public class DockB extends DockA {
 	

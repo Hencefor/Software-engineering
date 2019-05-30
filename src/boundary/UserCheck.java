@@ -1,4 +1,11 @@
 package boundary;
+/**   
+* @Title: UserCheck
+* @Package: boundary 
+* @date 2019.05.18
+* @see: control.FileOpe
+* @see: entity.User
+*/
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -19,14 +26,9 @@ import entity.User;
 
 
 /**   
-* @Title: UserCheck
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler of clicking "User" button. 
+* This class defines the GUI of event handler of clicking "User" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: control.FileOpe
-* @see: entity.User
 */
 public class UserCheck implements ActionListener{
 	JFrame frame = new JFrame();

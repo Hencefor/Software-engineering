@@ -1,4 +1,13 @@
 package boundary;
+/**   
+* @Title:Dock1
+* @Package: boundary 
+* @date 2019.05.18
+* @see: entity.Dock
+* @see: entity.User
+* @see: operation3
+*/
+
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -16,17 +25,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import operation3.*;
-
 /**   
-* @Title:Dock1
-* @Package: boundary 
-* @Description: This class defines the GUI after authenticating the user's identity. 
+ *  This class defines the GUI after authenticating the user's identity. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: entity.Dock
-* @see: entity.User
-* @see: operation3
 */
 public class Dock1 implements ActionListener  {
 	Dock da;

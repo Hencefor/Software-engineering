@@ -1,4 +1,9 @@
 package operation3;
+/**   
+* @Title Main
+* @Package:  operation3
+* @date 2019.05.18
+*/
 import java.io.*;
 
 import java.util.ArrayList;
@@ -7,11 +12,8 @@ import java.util.Date;
 import entity.Dock;
 
 /**   
-* @Title Main
-* @Package:  operation3
-* @Description: This class defines the method to validate the input format. 
+* This class defines the method to validate the input format. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
 */
 public class Main {

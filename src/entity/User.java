@@ -1,13 +1,15 @@
 package entity;
+/**   
+* @Title:User
+* @Package: entity
+* @date 2019.05.18  
+*/
 import java.io.Serializable;
 import java.util.Date;
 
 /**   
-* @Title:User
-* @Package: entity
-* @Description: This class defines operations of users with the information in the Docks document. 
+* This class defines operations of users with the information in the Docks document. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
 */
 public class User implements Serializable{

@@ -1,4 +1,15 @@
 package boundary;
+/**   
+ * @Title:Dock2_1
+ * @Package: boundary 
+ * @date 2019.05.18
+ * @see: entity.Dock
+ * @see: entity.User
+ * @see: control.FileOpe
+ * @see: control.FileOpeDock
+ * @see: MyThread
+ */
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -18,17 +29,9 @@ import entity.Dock;
 import entity.User;
 
 /**   
- * @Title:Dock2_1
- * @Package: boundary 
- * @Description: This class defines the GUI of event handler for clicking "pick" button. 
+ * This class defines the GUI of event handler for clicking "pick" button. 
  * @author Group 88
- * @date 2019.05.18
  * @version V1.0   
- * @see: entity.Dock
- * @see: entity.User
- * @see: control.FileOpe
- * @see: control.FileOpeDock
- * @see: MyThread
  */
 public class Dock2_1  implements ActionListener {
 	Dock da;

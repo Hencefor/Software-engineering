@@ -1,4 +1,10 @@
 package control;
+/**   
+* @Title:FileOpe
+* @Package: control
+* @date 2019.05.18
+* @see: entity.User
+*/
 
 /**
 
@@ -10,13 +16,9 @@ import java.util.ArrayList;
 import entity.User;
 
 /**   
-* @Title:FileOpe
-* @Package: control
-* @Description: This class defines operations of UserInfor document. 
+* This class defines operations of UserInfor document. 
 * @author Group 88
-* @date 2019.05.18
-* @version V1.0   
-* @see: entity.User
+* @version V1.0 
 */
 public class FileOpe {/**/
 	

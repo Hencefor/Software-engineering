@@ -1,4 +1,13 @@
 package boundary;
+/**   
+* @Title:MyThread
+* @Package: boundary 
+* @date 2019.05.18
+* @see: entity.Dock
+* @see: entity.User
+* @see: operation3
+*/
+
 
 import javax.swing.*;
 
@@ -10,15 +19,9 @@ import java.awt.event.*;
 import java.awt.*;
 
 /**   
-* @Title:MyThread
-* @Package: boundary 
-* @Description: This class defines the countdown function. 
+ * This class defines the countdown function. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: entity.Dock
-* @see: entity.User
-* @see: operation3
 */
 public class MyThread extends Thread implements Runnable {
 	int time = 10;

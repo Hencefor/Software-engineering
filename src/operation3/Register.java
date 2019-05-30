@@ -1,4 +1,9 @@
 package operation3;
+/**   
+* @Title Register
+* @Package:  operation3
+* @date 2019.05.18
+*/
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -15,11 +20,8 @@ import javax.swing.JTextField;
 import control.FileOpe;
 import entity.User;
 /**   
-* @Title Register
-* @Package:  operation3
-* @Description: This class defines the method to validate the input format. 
+* This class defines the method to validate the input format. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
 */
 public class Register extends JFrame implements ActionListener {

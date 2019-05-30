@@ -1,4 +1,13 @@
 package boundary;
+/**   
+* @Title:Systemi2_1
+* @Package: boundary 
+* @date 2019.05.18
+* @see: control.FileOpeDock
+* @see: entity.Dock
+* @see: operation3
+*/
+
 import operation3.*;
 import java.awt.Color;
 import java.awt.Font;
@@ -16,15 +25,9 @@ import control.FileOpeDock;
 import entity.Dock;
 
 /**   
-* @Title:Systemi2_1
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler of clicking "Dock" button. 
+* This class defines the GUI of event handler of clicking "Dock" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: control.FileOpeDock
-* @see: entity.Dock
-* @see: operation3
 */
 public class Systemi2_1 implements ActionListener  {
 	String id="";

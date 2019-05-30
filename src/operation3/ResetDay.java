@@ -1,4 +1,11 @@
 package operation3;
+/**   
+* @Title:ResetDay
+* @Package:  operation3
+* @date 2019.05.18 
+* @see control.FileOpe
+* @see entity.User
+*/
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -7,14 +14,9 @@ import control.FileOpe;
 import entity.User;
 
 /**   
-* @Title:ResetDay
-* @Package:  operation3
-* @Description: This class used to operation the system update when the time of the period is timeout. 
+* This class used to operation the system update when the time of the period is timeout. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.1   
-* @see control.FileOpe
-* @see entity.User
 */
 public class ResetDay {   
     private final Timer timer = new Timer();

@@ -1,4 +1,10 @@
 package boundary;
+/**   
+* @Title:System0
+* @Package: boundary 
+* @date 2019.05.18
+*/
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,11 +16,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**   
-* @Title:System0
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler of clicking "System" button. 
+* This class defines the GUI of event handler of clicking "System" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
 */
 public class System0 implements ActionListener {

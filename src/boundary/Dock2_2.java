@@ -1,4 +1,16 @@
 package boundary;
+/**   
+ * @Title:Dock2_2
+ * @Package: boundary 
+ * @date 2019.05.18
+ * @see: entity.Dock
+ * @see: entity.User
+ * @see: control.FileOpe
+ * @see: control.FileOpeDock
+ * @see: MyThread
+ * @see£º operation3
+ */
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,18 +32,9 @@ import entity.User;
 import operation3.*;
 
 /**   
- * @Title:Dock2_2
- * @Package: boundary 
- * @Description: This class defines the GUI of event handler for clicking "return" button. 
+ * This class defines the GUI of event handler for clicking "return" button. 
  * @author Group 88
- * @date 2019.05.18
  * @version V1.0   
- * @see: entity.Dock
- * @see: entity.User
- * @see: control.FileOpe
- * @see: control.FileOpeDock
- * @see: MyThread
- * @see£º operation3
  */
 public class Dock2_2  implements ActionListener {
 	Dock da;

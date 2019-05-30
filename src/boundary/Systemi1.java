@@ -1,4 +1,12 @@
 package boundary;
+/**   
+* @Title:Systemi1
+* @Package: boundary 
+* @date 2019.05.18
+* @see: control.FileOpe
+* @see: operation3
+*/
+
 import operation3.*;
 import java.awt.Color;
 import java.awt.Font;
@@ -12,14 +20,9 @@ import javax.swing.JLabel;
 import control.FileOpe;
 
 /**   
-* @Title:Systemi1
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler of clicking "Information" button. 
+* This class defines the GUI of event handler of clicking "Information" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: control.FileOpe
-* @see: operation3
 */
 public class Systemi1 implements ActionListener {
  

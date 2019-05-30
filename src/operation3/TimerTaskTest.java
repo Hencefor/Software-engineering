@@ -1,15 +1,15 @@
-package operation3;/**
- * 
- */
-
-import java.util.Timer;  
+package operation3;
 
 /**   
 * @Title:TimerTaskTest
 * @Package:  operation3
-* @Description: This class used to define the period that the system should be updated. 
-* @author Group 88
 * @date 2019.05.18
+*/
+import java.util.Timer;  
+
+/**   
+* This class used to define the period that the system should be updated. 
+* @author Group 88
 * @version V1.1   
 */
 public class TimerTaskTest extends java.util.TimerTask{   

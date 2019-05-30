@@ -1,4 +1,12 @@
 package boundary;
+/**   
+* @Title:Systemp2_1_100
+* @Package: boundary 
+* @date 2019.05.18
+* @see: control.FileOpe
+* @see: entity.User
+*/
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -14,14 +22,9 @@ import control.FileOpe;
 import entity.User;
 
 /**   
-* @Title:Systemp2_1_100
-* @Package: boundary 
-* @Description: This class defines the GUI after the identity authentication. 
+* This class defines the GUI after the identity authentication. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: control.FileOpe
-* @see: entity.User
 */
 public class Systemp2_1_100 implements ActionListener {
 	User a;

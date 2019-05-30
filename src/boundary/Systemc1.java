@@ -1,4 +1,13 @@
 package boundary;
+/**   
+* @Title:Systemc1
+* @Package: boundary 
+* @date 2019.05.18
+* @see: control.FileOpe
+* @see: entity.User
+* @see: operation3.AccountValidatorUtil
+*/
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -17,15 +26,9 @@ import entity.User;
 import operation3.AccountValidatorUtil;
 
 /**   
-* @Title:Systemc1
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler of clicking "Create" button. 
+* This class defines the GUI of event handler of clicking "Create" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: control.FileOpe
-* @see: entity.User
-* @see: operation3.AccountValidatorUtil
 */
 public class Systemc1 implements ActionListener  {
 	

@@ -1,4 +1,11 @@
 package boundary;
+/**   
+* @Title:DockA
+* @Package: boundary 
+* @date 2019.05.18
+* @see: FileOpe, entity,operation3
+*/
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,13 +27,9 @@ import javax.swing.JOptionPane;
 import operation3.*;
 
 /**   
-* @Title:DockA
-* @Package: boundary 
-* @Description: This class defines the GUI of event handler for selecting to click the "Dock A" button. 
+* This class defines the GUI of event handler for selecting to click the "Dock A" button. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
-* @see: FileOpe, entity,operation3
 */
 public class DockA implements ActionListener {
 	String id="";

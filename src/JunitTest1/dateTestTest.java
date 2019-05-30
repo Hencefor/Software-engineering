@@ -1,5 +1,9 @@
 package JunitTest1;
-
+/**   
+* @Title:JunitTest1
+* @Package: JunitTest1
+* @date 2019.05.18
+*/
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -7,11 +11,8 @@ import org.junit.jupiter.api.Test;
 import operation3.AccountValidatorUtil;
 
 /**   
-* @Title:JunitTest1
-* @Package: JunitTest1
-* @Description: This class used to test some data. 
+* This class used to test some data. 
 * @author Group 88
-* @date 2019.05.18
 * @version V1.0   
 */
 class JunitTest1{
